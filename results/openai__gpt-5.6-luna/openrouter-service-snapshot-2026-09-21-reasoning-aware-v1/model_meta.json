@@ -1,0 +1,9 @@
+{
+  "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
+  "name": "openai/gpt-5.6-luna",
+  "open_weights": false,
+  "parameter_count": null,
+  "probability_source": "model-emitted-complete-candidate-probability-vector",
+  "revision": "openrouter-service-snapshot-2026-09-21-reasoning-aware-v1",
+  "url": "https://openrouter.ai/openai/gpt-5.6-luna"
+}
