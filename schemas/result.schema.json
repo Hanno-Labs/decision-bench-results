@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hanno.ai/schemas/decision-bench-result-v1.json",
+  "title": "DecisionBench result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "benchmark_name", "benchmark_version", "dataset_repo",
+    "dataset_revision", "task_spec_sha256", "model", "requested_rows",
+    "successful_rows", "unsupported_rows", "error_rows", "coverage",
+    "primary_accuracy", "supported_accuracy", "views", "artifact", "submitted_at"
+  ],
+  "properties": {
+    "schema_version": {"const": "decision-bench-result-v1"},
+    "benchmark_name": {"type": "string", "minLength": 1},
+    "benchmark_version": {"type": "string", "minLength": 1},
+    "dataset_repo": {"type": "string", "minLength": 1},
+    "dataset_revision": {"type": "string", "minLength": 1},
+    "task_spec_sha256": {"$ref": "#/$defs/sha256"},
+    "model": {"$ref": "#/$defs/model"},
+    "requested_rows": {"type": "integer", "minimum": 1},
+    "successful_rows": {"type": "integer", "minimum": 0},
+    "unsupported_rows": {"type": "integer", "minimum": 0},
+    "error_rows": {"type": "integer", "minimum": 0},
+    "coverage": {"type": "number", "minimum": 0, "maximum": 1},
+    "primary_accuracy": {"type": "number", "minimum": 0, "maximum": 1},
+    "supported_accuracy": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "mean_negative_log_likelihood": {"type": ["number", "null"], "minimum": 0},
+    "expected_calibration_error": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+    "mean_latency_seconds": {"type": ["number", "null"], "minimum": 0},
+    "views": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {"$ref": "#/$defs/view"}
+    },
+    "artifact": {"$ref": "#/$defs/artifact"},
+    "submitted_at": {"type": "string", "format": "date-time"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "revision", "adapter", "probability_source"],
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "revision": {"type": "string", "minLength": 1},
+        "url": {"type": ["string", "null"]},
+        "adapter": {"type": "string", "minLength": 1},
+        "probability_source": {"type": "string", "minLength": 1},
+        "open_weights": {"type": ["boolean", "null"]},
+        "parameter_count": {"type": ["integer", "null"], "minimum": 0}
+      }
+    },
+    "view": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rows", "accuracy", "mean_negative_log_likelihood", "expected_calibration_error", "mean_latency_seconds"],
+      "properties": {
+        "rows": {"type": "integer", "minimum": 0},
+        "accuracy": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "mean_negative_log_likelihood": {"type": ["number", "null"], "minimum": 0},
+        "expected_calibration_error": {"type": ["number", "null"], "minimum": 0, "maximum": 1},
+        "mean_latency_seconds": {"type": ["number", "null"], "minimum": 0}
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["uri", "manifest_sha256", "summary_sha256", "raw_sha256"],
+      "properties": {
+        "uri": {"type": "string", "minLength": 1},
+        "manifest_sha256": {"$ref": "#/$defs/sha256"},
+        "summary_sha256": {"$ref": "#/$defs/sha256"},
+        "raw_sha256": {"$ref": "#/$defs/sha256"}
+      }
+    }
+  }
+}

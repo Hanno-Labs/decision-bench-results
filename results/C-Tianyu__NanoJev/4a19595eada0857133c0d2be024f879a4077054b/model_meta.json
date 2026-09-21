@@ -1,0 +1,9 @@
+{
+  "adapter": "nanojev-hf",
+  "name": "C-Tianyu/NanoJev",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_candidate_logits_fp32_softmax",
+  "revision": "4a19595eada0857133c0d2be024f879a4077054b",
+  "url": "https://huggingface.co/C-Tianyu/NanoJev"
+}

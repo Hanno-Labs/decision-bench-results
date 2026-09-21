@@ -1,0 +1,43 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "decision-bench-results"
+version = "0.1.0"
+description = "Reviewed DecisionBench result records"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "CC0-1.0"
+dependencies = [
+  "huggingface-hub>=0.35,<1",
+  "jsonschema>=4.25,<5",
+  "pandas>=2.3,<3",
+  "pyarrow>=21,<22",
+]
+
+[dependency-groups]
+dev = [
+  "pytest>=8.4,<9",
+  "ruff>=0.13,<1",
+]
+
+[project.scripts]
+validate-results = "scripts.validate_results:main"
+build-leaderboard = "scripts.build_leaderboard:main"
+push-leaderboard = "scripts.push_leaderboard:main"
+compare-results = "scripts.compare_results:main"
+import-result = "scripts.import_result:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["scripts"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]
