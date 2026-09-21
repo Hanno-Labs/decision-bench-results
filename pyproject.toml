@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 license = "CC0-1.0"
 dependencies = [
-  "huggingface-hub>=0.35,<1",
+  "huggingface-hub>=1.19,<2",
   "jsonschema>=4.25,<5",
   "pandas>=2.3,<3",
   "pyarrow>=21,<22",
@@ -25,7 +25,6 @@ dev = [
 [project.scripts]
 validate-results = "scripts.validate_results:main"
 build-leaderboard = "scripts.build_leaderboard:main"
-push-leaderboard = "scripts.push_leaderboard:main"
 compare-results = "scripts.compare_results:main"
 import-result = "scripts.import_result:main"
 
