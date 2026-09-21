@@ -18,7 +18,7 @@ This repository is the reviewed, append-only result registry for
 
 [Leaderboard]: https://huggingface.co/spaces/Hanno-Labs/decision-bench-leaderboard
 [DecisionBench]: https://github.com/Hanno-Labs/decision-bench
-[Submission guide]: https://hanno-labs.github.io/decision-bench/contributing/submitting_results/
+[Submission guide]: https://ubiquitous-bassoon-zzmjggp.pages.github.io/contributing/submitting_results/
 [Issues]: https://github.com/Hanno-Labs/decision-bench/issues
 
 ## Layout
