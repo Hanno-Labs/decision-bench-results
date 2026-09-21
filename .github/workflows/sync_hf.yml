@@ -56,3 +56,9 @@ jobs:
             leaderboard.parquet \
             --repo-type space \
             --commit-message "Publish ${GITHUB_SHA::7}"
+          uv run hf upload \
+            Hanno-Labs/decision-bench-leaderboard \
+            dist/leaderboard.json \
+            static/leaderboard.json \
+            --repo-type space \
+            --commit-message "Publish ${GITHUB_SHA::7}"
