@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "IkerMoel/open-alternative-jev",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "option-letter-logit-softmax",
+  "revision": "4a85df1831b537343c9e133b5150fa3a3b1ce98e",
+  "url": "https://github.com/ikermoel/open-alternative-jev"
+}
