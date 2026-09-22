@@ -1,6 +1,6 @@
 {
   "adapter": "jev-compatible-server-nli-entailment-v1",
-  "name": "opendecision",
+  "name": "deepanwadhwa/OpenDecision",
   "model_type": "classifier",
   "open_weights": true,
   "parameter_count": null,
