@@ -17,7 +17,6 @@
   "model": {
     "adapter": "jev-compatible-server-v1",
     "name": "FINAL-Bench/ZTC-Judge-4B",
-    "model_type": "classifier",
     "open_weights": true,
     "parameter_count": 4659865088,
     "probability_source": "native_probability_distribution",
