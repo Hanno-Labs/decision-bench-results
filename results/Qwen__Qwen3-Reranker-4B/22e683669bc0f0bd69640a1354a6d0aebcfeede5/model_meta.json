@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "classifier",
+  "name": "Qwen/Qwen3-Reranker-4B",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_probability_distribution",
+  "revision": "22e683669bc0f0bd69640a1354a6d0aebcfeede5",
+  "url": "https://huggingface.co/Qwen/Qwen3-Reranker-4B"
+}
