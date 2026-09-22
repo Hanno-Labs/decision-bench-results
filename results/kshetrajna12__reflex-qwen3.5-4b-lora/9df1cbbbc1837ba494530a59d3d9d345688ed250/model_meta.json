@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "kshetrajna12/reflex-qwen3.5-4b-lora",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "two_order_option_letter_logit_softmax",
+  "revision": "9df1cbbbc1837ba494530a59d3d9d345688ed250",
+  "url": "https://huggingface.co/kshetrajna12/reflex-qwen3.5-4b-lora"
+}
