@@ -2,7 +2,7 @@
   "adapter": "nimble-hf",
   "name": "bespokelabs/Bespoke-Nimble-9B",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 9000000000,
   "probability_source": "native_candidate_logits_fp32_softmax",
   "revision": "594dfdcfb6f94e3d0c0db7535180d3c71689169a",
   "url": "https://huggingface.co/bespokelabs/Bespoke-Nimble-9B"

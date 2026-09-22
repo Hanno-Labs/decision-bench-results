@@ -12,7 +12,7 @@
     "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
     "probability_source": "model-emitted-complete-candidate-probability-vector",
     "open_weights": false,
-    "parameter_count": null
+    "parameter_count": 552000000000
   },
   "requested_rows": 23900,
   "successful_rows": 23852,
