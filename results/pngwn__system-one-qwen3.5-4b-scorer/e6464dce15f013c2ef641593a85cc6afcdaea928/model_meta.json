@@ -1,0 +1,8 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "name": "pngwn/system-one-qwen3.5-4b-scorer",
+  "open_weights": true,
+  "probability_source": "native_scalar_logits_temperature_softmax",
+  "revision": "e6464dce15f013c2ef641593a85cc6afcdaea928",
+  "url": "https://huggingface.co/pngwn/system-one-qwen3.5-4b-scorer"
+}

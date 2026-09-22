@@ -1,0 +1,42 @@
+{
+  "artifact": {
+    "manifest_sha256": "afb982e755f8683316ad36b0f64b8f5e4b5663c9777bf1742bbd7b06e28cb235",
+    "raw_sha256": "dbcfac726eee561e3ca33048e705344a454123d0301aca6e1f7e03d7a93e6232",
+    "summary_sha256": "fba941d0cd9065cfcb3ab32a47ada5df0eaadbdefc6e88d69f6297635738f63f",
+    "uri": "hf://buckets/Hanno-Labs/training/decision-bench/runs/system-one-qwen35-4b-scorer-full-model-aligned-truncation-20260920-r1"
+  },
+  "benchmark_name": "DecisionBench",
+  "benchmark_version": "1.0",
+  "coverage": 1.0,
+  "dataset_repo": "Hanno-Labs/decision-bench",
+  "dataset_revision": "b7c8107e01ecb1aee7c7eaf5caee4a3ba9f59443",
+  "error_rows": 0,
+  "expected_calibration_error": 0.08330746490529105,
+  "mean_latency_seconds": 0.28024400751574374,
+  "mean_negative_log_likelihood": 0.9019110926343347,
+  "model": {
+    "adapter": "jev-compatible-server-v1",
+    "name": "pngwn/system-one-qwen3.5-4b-scorer",
+    "open_weights": true,
+    "probability_source": "native_scalar_logits_temperature_softmax",
+    "revision": "e6464dce15f013c2ef641593a85cc6afcdaea928",
+    "url": "https://huggingface.co/pngwn/system-one-qwen3.5-4b-scorer"
+  },
+  "primary_accuracy": 0.76325,
+  "requested_rows": 20000,
+  "schema_version": "decision-bench-result-v1",
+  "submitted_at": "2026-09-22T00:00:00+00:00",
+  "successful_rows": 20000,
+  "supported_accuracy": 0.76325,
+  "task_spec_sha256": "2e138335779d06194d47ce4d59116773cf03b89ad1b52c4704b67f777e7ae9e7",
+  "unsupported_rows": 0,
+  "views": {
+    "overall": {
+      "accuracy": 0.76325,
+      "expected_calibration_error": 0.08330746490529105,
+      "mean_latency_seconds": 0.28024400751574374,
+      "mean_negative_log_likelihood": 0.9019110926343347,
+      "rows": 20000
+    }
+  }
+}
