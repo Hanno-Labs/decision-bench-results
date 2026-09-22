@@ -1,7 +1,8 @@
 name: Compare result submissions
 
 on:
-  pull_request:
+  pull_request_target:
+    types: [opened, synchronize, reopened]
     paths:
       - "results/**/*.json"
 
@@ -11,15 +12,89 @@ permissions:
 jobs:
   compare:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
     steps:
-      - uses: actions/checkout@v6
+      - name: Check out trusted base
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.pull_request.base.sha }}
+          path: base
+          persist-credentials: false
+      - name: Check out pull request data
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.sha }}
+          path: pr-data
+          persist-credentials: false
+      - name: Record changed files
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh api --paginate
+          repos/${{ github.repository }}/pulls/${{ github.event.number }}/files
+          --jq '.[] | [.status, .filename] | @tsv'
+          > changed-files.tsv
       - uses: astral-sh/setup-uv@v8.2.0
         with:
           enable-cache: true
           python-version: "3.12"
-      - run: uv sync --locked
-      - run: uv run compare-results --output result-comparison.md
+      - name: Install trusted comparison code
+        working-directory: base
+        run: uv sync --locked
+      - name: Build comparison
+        working-directory: base
+        run: >-
+          uv run compare-results
+          --base-root .
+          --pr-root ../pr-data
+          --changed-files ../changed-files.tsv
+          --output result-comparison.md
       - uses: actions/upload-artifact@v6
         with:
           name: decision-bench-result-comparison
-          path: result-comparison.md
+          path: base/result-comparison.md
+
+  comment:
+    needs: compare
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: decision-bench-result-comparison
+      - name: Create or update comparison comment
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8
+        with:
+          script: |
+            const fs = require("fs");
+            const marker = "<!-- decision-bench-results-comparison -->";
+            const body = fs.readFileSync("result-comparison.md", "utf8");
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100,
+            });
+            const existing = comments.find((comment) =>
+              comment.user?.login === "github-actions[bot]" && comment.body?.includes(marker)
+            );
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            }
