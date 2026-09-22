@@ -1,0 +1,9 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "name": "KaLM-Embedding/KaLM-Reranker-V1-Nano-R2",
+  "open_weights": true,
+  "parameter_count": 786029296,
+  "probability_source": "native_probability_distribution",
+  "revision": "3902d6453ea915007dcbf88fbc8a1d7dd5f8df10",
+  "url": "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano-R2"
+}
