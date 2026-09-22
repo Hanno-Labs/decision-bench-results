@@ -43,7 +43,7 @@ def test_result_without_artifact_is_valid_and_buildable(tmp_path: Path) -> None:
     assert validate_repository(tmp_path)
     rows = leaderboard_rows(tmp_path)
     assert rows
-    assert all(row["model_type"] == model["model_type"] for row in rows)
+    assert all(row["model_type"] == model.get("model_type") for row in rows)
     assert all(row["artifact_uri"] is None for row in rows)
     assert all(row["artifact_manifest_sha256"] is None for row in rows)
 
