@@ -1,0 +1,71 @@
+{
+  "artifact": {
+    "manifest_sha256": "0144f498e2c6a38da2bf4c4fa8bd0e2d50659a75f481be2b5c268e6772f77636",
+    "raw_sha256": "caa2e01e342bcb5af5da5590d4ffd9f5862465a4c11e9235c6a3bfbdc40d345a",
+    "summary_sha256": "54c609cf3467a9175f02844e1c371beae984922c8e5ff34b8e65a82ccbe572dd",
+    "uri": "hf://buckets/Hanno-Labs/training/decision-bench/runs/laya-23900-20260922-r2/laya"
+  },
+  "benchmark_name": "DecisionBench",
+  "benchmark_version": "1.0",
+  "coverage": 0.9079497907949791,
+  "dataset_repo": "Hanno-Labs/decision-bench",
+  "dataset_revision": "b7c8107e01ecb1aee7c7eaf5caee4a3ba9f59443",
+  "error_rows": 2200,
+  "expected_calibration_error": 0.25860610385126914,
+  "mean_latency_seconds": 0.4161778348110067,
+  "mean_negative_log_likelihood": 4.572791836209009,
+  "model": {
+    "adapter": "laya-hf",
+    "name": "convaiinnovations/laya",
+    "open_weights": true,
+    "parameter_count": null,
+    "probability_source": "native-decisions-probability-distribution",
+    "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982",
+    "url": "https://huggingface.co/convaiinnovations/laya"
+  },
+  "primary_accuracy": 0.3267782426778243,
+  "requested_rows": 23900,
+  "schema_version": "decision-bench-result-v1",
+  "submitted_at": "2026-09-22T11:44:29Z",
+  "successful_rows": 21700,
+  "supported_accuracy": 0.3599078341013825,
+  "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
+  "unsupported_rows": 0,
+  "views": {
+    "overall": {
+      "accuracy": 0.3599078341013825,
+      "expected_calibration_error": 0.25860610385126914,
+      "mean_latency_seconds": 0.4161778348110067,
+      "mean_negative_log_likelihood": 4.572791836209009,
+      "rows": 21700
+    },
+    "task:canonical_entity": {
+      "accuracy": 0.24838520258367586,
+      "expected_calibration_error": 0.3083873172743103,
+      "mean_latency_seconds": 0.42612256390369085,
+      "mean_negative_log_likelihood": 10.499015588362731,
+      "rows": 1703
+    },
+    "task:route": {
+      "accuracy": 0.3563318777292576,
+      "expected_calibration_error": 0.6233829813281914,
+      "mean_latency_seconds": 0.504327408274774,
+      "mean_negative_log_likelihood": 20.921967050036407,
+      "rows": 1145
+    },
+    "task:tax-document-page-classification": {
+      "accuracy": 0.07692307692307693,
+      "expected_calibration_error": 0.770435959228313,
+      "mean_latency_seconds": 0.31892978557600427,
+      "mean_negative_log_likelihood": 25.44006510280225,
+      "rows": 52
+    },
+    "task:tool_route": {
+      "accuracy": 0.3037214885954382,
+      "expected_calibration_error": 0.24188764942684218,
+      "mean_latency_seconds": 0.4101524590933863,
+      "mean_negative_log_likelihood": 8.659987886087187,
+      "rows": 1666
+    }
+  }
+}
