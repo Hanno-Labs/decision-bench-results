@@ -16,7 +16,7 @@
   "mean_negative_log_likelihood": 1.812611988921139,
   "model": {
     "adapter": "jev-compatible-server-nli-entailment-v1",
-    "name": "opendecision",
+    "name": "deepanwadhwa/OpenDecision",
     "model_type": "classifier",
     "open_weights": true,
     "parameter_count": null,
