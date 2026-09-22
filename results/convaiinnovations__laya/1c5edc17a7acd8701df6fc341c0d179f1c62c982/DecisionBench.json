@@ -17,7 +17,6 @@
   "model": {
     "adapter": "laya-hf",
     "name": "convaiinnovations/laya",
-    "model_type": "decision-model",
     "open_weights": true,
     "parameter_count": 421000000,
     "probability_source": "native-decisions-probability-distribution",

@@ -1,7 +1,6 @@
 {
   "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
   "name": "deepseek/deepseek-v4.1-flash",
-  "model_type": "language-model",
   "open_weights": true,
   "parameter_count": 552000000000,
   "probability_source": "model-emitted-complete-candidate-probability-vector",

@@ -1,7 +1,6 @@
 {
   "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
   "name": "openai/gpt-5.6-luna",
-  "model_type": "language-model",
   "open_weights": false,
   "parameter_count": null,
   "probability_source": "model-emitted-complete-candidate-probability-vector",

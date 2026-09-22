@@ -1,7 +1,6 @@
 {
   "adapter": "jev-compatible-server-v1",
   "name": "BAAI/bge-reranker-v2-m3",
-  "model_type": "classifier",
   "open_weights": true,
   "parameter_count": 567755777,
   "probability_source": "native_probability_distribution",

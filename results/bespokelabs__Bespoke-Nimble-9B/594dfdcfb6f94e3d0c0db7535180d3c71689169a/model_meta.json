@@ -1,7 +1,6 @@
 {
   "adapter": "nimble-hf",
   "name": "bespokelabs/Bespoke-Nimble-9B",
-  "model_type": "decision-model",
   "open_weights": true,
   "parameter_count": 9000000000,
   "probability_source": "native_candidate_logits_fp32_softmax",
