@@ -1,8 +1,9 @@
 {
   "adapter": "hf-decision-tokens",
   "name": "Hanno-Labs/bosun-v3.1-1.7b",
+  "model_type": "decision-model",
   "open_weights": true,
-  "parameter_count": 1700000000,
+  "parameter_count": 2031739904,
   "probability_source": "native_full_candidate_logits",
   "revision": "2ef2d97227434a701e8134b90d62ef7669a197d5",
   "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-1.7b"

@@ -7,6 +7,7 @@
   "task_spec_sha256": "8ef3026c05e91c2c89876da7f5dd441a13f9e29867d10456cc2a6729cbe861ea",
   "model": {
     "name": "Hanno-Labs/bosun-v3.1-0.6b",
+    "model_type": "decision-model",
     "revision": "aaa9dd06d4d6501b33df61942472fed9284bc5e6",
     "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-0.6b",
     "adapter": "bosun-decision-prompt-v3-stable-slots",

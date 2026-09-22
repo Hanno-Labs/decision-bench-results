@@ -17,6 +17,7 @@
   "model": {
     "adapter": "jev-compatible-server-v1",
     "name": "Alibaba-NLP/gte-reranker-modernbert-base",
+    "model_type": "classifier",
     "open_weights": true,
     "parameter_count": 149605633,
     "probability_source": "native_probability_distribution",

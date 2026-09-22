@@ -1,6 +1,7 @@
 {
   "adapter": "jev-openrouter-decisions-v2",
   "name": "typesafe/jev-1.13",
+  "model_type": "decision-model",
   "open_weights": false,
   "parameter_count": null,
   "probability_source": "native-decisions-probability-distribution",

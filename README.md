@@ -32,3 +32,8 @@ results/<model-name>/<immutable-revision>/
 Each compact record contains the reviewed metrics and immutable model and dataset identities. A
 submission may also point to complete row-level artifacts in durable storage. Unsupported and error
 rows count as misses in the primary leaderboard score.
+
+Each model declares its own reviewed `model_type`: `decision-model` for checkpoints trained across
+the benchmark's `noul`, `choice`, and `score` primitives with a native decision output;
+`language-model` for text-generating models; or `classifier` for fixed-purpose class, relevance, or
+scalar scorers. Architecture names and API access do not determine this field.

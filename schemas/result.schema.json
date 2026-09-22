@@ -41,10 +41,13 @@
     "model": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "revision", "adapter", "probability_source"],
+      "required": ["name", "revision", "model_type", "adapter", "probability_source"],
       "properties": {
         "name": {"type": "string", "minLength": 1},
         "revision": {"type": "string", "minLength": 1},
+        "model_type": {
+          "enum": ["decision-model", "language-model", "classifier"]
+        },
         "url": {"type": ["string", "null"]},
         "adapter": {"type": "string", "minLength": 1},
         "probability_source": {"type": "string", "minLength": 1},
