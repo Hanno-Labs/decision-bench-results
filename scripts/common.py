@@ -26,6 +26,80 @@ def safe_model_name(name: str) -> str:
     return name.replace("/", "__").replace(" ", "_")
 
 
+def non_reasoning_suite_metrics(raw_path: Path) -> dict[str, float | int] | None:
+    """Compute the English suite metrics from successful raw predictions.
+
+    ECE is nonlinear, so it must be recomputed from the row-level confidence
+    values after excluding the reasoning family; it cannot be derived from
+    the overall and reasoning-family scalar ECE values.
+    """
+
+    latest_by_row_id: dict[str, dict[str, Any]] = {}
+    with raw_path.open() as handle:
+        for line in handle:
+            record = json.loads(line)
+            if not isinstance(record, dict):
+                raise TypeError("raw prediction must be an object")
+            latest_by_row_id[str(record["row_id"])] = record
+
+    records = [
+        record
+        for record in latest_by_row_id.values()
+        if record.get("status") == "ok"
+        and _record_dimension(record, "family") != "reasoning"
+        and isinstance(record.get("scored"), dict)
+        and "negative_log_likelihood" in record
+        and "latency_seconds" in record
+    ]
+    if not records:
+        return None
+
+    bins = 15
+    counts = [0] * bins
+    confidence_sums = [0.0] * bins
+    correctness_sums = [0.0] * bins
+    for record in records:
+        scored = record["scored"]
+        probabilities = scored["probabilities"]
+        confidence = max(float(value) for value in probabilities)
+        bin_index = min(int(confidence * bins), bins - 1)
+        counts[bin_index] += 1
+        confidence_sums[bin_index] += confidence
+        correctness_sums[bin_index] += float(bool(scored["correct"]))
+    ece = 0.0
+    total = len(records)
+    for count, confidence_sum, correctness_sum in zip(
+        counts, confidence_sums, correctness_sums, strict=True
+    ):
+        if count:
+            ece += (count / total) * abs(
+                correctness_sum / count - confidence_sum / count
+            )
+
+    return {
+        "rows": total,
+        "accuracy": sum(bool(record["scored"]["correct"]) for record in records)
+        / total,
+        "mean_negative_log_likelihood": sum(
+            float(record["negative_log_likelihood"]) for record in records
+        )
+        / total,
+        "expected_calibration_error": ece,
+        "mean_latency_seconds": sum(
+            float(record["latency_seconds"]) for record in records
+        )
+        / total,
+    }
+
+
+def _record_dimension(record: dict[str, Any], name: str) -> str | None:
+    value = record.get(name)
+    example = record.get("example")
+    if value is None and isinstance(example, dict):
+        value = example.get(name)
+    return str(value) if value is not None else None
+
+
 def leaderboard_rows(root: Path) -> list[dict[str, Any]]:
     rows: list[dict[str, Any]] = []
     for path in result_paths(root):
