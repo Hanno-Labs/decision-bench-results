@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "ZefanCai/Open-Jev-2B",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_scalar_logits_temperature_softmax",
+  "revision": "0c7aa498b1627be8da4acf34c863ff0ee0a92785",
+  "url": "https://huggingface.co/ZefanCai/Open-Jev-2B"
+}
