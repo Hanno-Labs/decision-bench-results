@@ -9,7 +9,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from scripts.common import load_object, safe_model_name
+from scripts.common import load_object, non_reasoning_suite_metrics, safe_model_name
 
 
 def sha256(path: Path) -> str:
@@ -91,6 +91,12 @@ def main() -> None:
         "open_weights": args.open_weights,
         "parameter_count": args.parameter_count,
     }
+    views = normalized_views(summary)
+    raw_path = args.summary.parent / "raw.jsonl"
+    suite_metrics = non_reasoning_suite_metrics(raw_path) if raw_path.is_file() else None
+    if suite_metrics is not None:
+        views["suite:DecisionBench(eng, v1)"] = suite_metrics
+
     record = {
         "schema_version": "decision-bench-result-v1",
         "benchmark_name": "DecisionBench",
@@ -109,7 +115,7 @@ def main() -> None:
         "mean_negative_log_likelihood": overall["mean_negative_log_likelihood"],
         "expected_calibration_error": overall["expected_calibration_error"],
         "mean_latency_seconds": overall["mean_latency_seconds"],
-        "views": normalized_views(summary),
+        "views": views,
         "submitted_at": args.submitted_at or datetime.now(UTC).isoformat(),
     }
     if args.artifact_uri:
