@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "classifier",
+  "name": "fastino/gliner2.5-small-v1",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_probability_distribution",
+  "revision": "7e6f537f10337497069276892a5ef435028252ce",
+  "url": "https://huggingface.co/fastino/gliner2.5-small-v1"
+}
