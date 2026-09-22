@@ -1,0 +1,9 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "name": "FINAL-Bench/ZTC-Judge-4B",
+  "open_weights": true,
+  "parameter_count": 4659865088,
+  "probability_source": "native_probability_distribution",
+  "revision": "b0bb16038d7adbca6f4edda90ac72fb960d8319f",
+  "url": "https://huggingface.co/FINAL-Bench/ZTC-Judge-4B"
+}
