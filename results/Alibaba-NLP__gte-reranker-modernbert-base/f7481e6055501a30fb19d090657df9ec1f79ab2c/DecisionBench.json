@@ -1,0 +1,43 @@
+{
+  "artifact": {
+    "manifest_sha256": "aea17d6f362a6be6bc6ceaefc44bd1e7df3000dfe96f651b4dd784fef8b0181c",
+    "raw_sha256": "16c0fd47e3548d78b66ee06626404d0fd697870788765ed082b047ce44524215",
+    "summary_sha256": "370ba7c2eb0dd44635d5558fb9cfb88b362a92b14838142c852e76df088c2ffd",
+    "uri": "hf://buckets/Hanno-Labs/training/decision-bench/runs/gte-reranker-23900-20260922-r1/gte-reranker-modernbert-base"
+  },
+  "benchmark_name": "DecisionBench",
+  "benchmark_version": "1.0",
+  "coverage": 1.0,
+  "dataset_repo": "Hanno-Labs/decision-bench",
+  "dataset_revision": "b7c8107e01ecb1aee7c7eaf5caee4a3ba9f59443",
+  "error_rows": 0,
+  "expected_calibration_error": 0.04738063817076092,
+  "mean_latency_seconds": 0.33530400654854386,
+  "mean_negative_log_likelihood": 2.050034775621166,
+  "model": {
+    "adapter": "jev-compatible-server-v1",
+    "name": "Alibaba-NLP/gte-reranker-modernbert-base",
+    "open_weights": true,
+    "parameter_count": 149605633,
+    "probability_source": "native_probability_distribution",
+    "revision": "f7481e6055501a30fb19d090657df9ec1f79ab2c",
+    "url": "https://huggingface.co/Alibaba-NLP/gte-reranker-modernbert-base"
+  },
+  "primary_accuracy": 0.23347280334728032,
+  "requested_rows": 23900,
+  "schema_version": "decision-bench-result-v1",
+  "submitted_at": "2026-09-22T14:00:00+00:00",
+  "successful_rows": 23900,
+  "supported_accuracy": 0.23347280334728032,
+  "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
+  "unsupported_rows": 0,
+  "views": {
+    "overall": {
+      "accuracy": 0.23347280334728032,
+      "expected_calibration_error": 0.04738063817076092,
+      "mean_latency_seconds": 0.33530400654854386,
+      "mean_negative_log_likelihood": 2.050034775621166,
+      "rows": 23900
+    }
+  }
+}
