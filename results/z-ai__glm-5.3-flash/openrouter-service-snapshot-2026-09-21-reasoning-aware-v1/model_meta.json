@@ -1,0 +1,10 @@
+{
+  "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
+  "name": "z-ai/glm-5.3-flash",
+  "model_type": "language-model",
+  "open_weights": true,
+  "parameter_count": 320000000000,
+  "probability_source": "model-emitted-complete-candidate-probability-vector",
+  "revision": "openrouter-service-snapshot-2026-09-21-reasoning-aware-v1",
+  "url": "https://openrouter.ai/z-ai/glm-5.3-flash"
+}

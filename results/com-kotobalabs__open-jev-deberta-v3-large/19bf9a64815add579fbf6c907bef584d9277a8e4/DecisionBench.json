@@ -17,8 +17,9 @@
   "model": {
     "adapter": "openjev-hf",
     "name": "com-kotobalabs/open-jev-deberta-v3-large",
+    "model_type": "decision-model",
     "open_weights": true,
-    "parameter_count": null,
+    "parameter_count": 435000000,
     "probability_source": "native_grouped_logits_temperature_softmax",
     "revision": "19bf9a64815add579fbf6c907bef584d9277a8e4",
     "url": "https://huggingface.co/com-kotobalabs/open-jev-deberta-v3-large"
@@ -885,6 +886,13 @@
       "mean_latency_seconds": 0.01525685638019972,
       "mean_negative_log_likelihood": 1.2947842943681067,
       "rows": 1698
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 21378,
+      "accuracy": 0.41009448966226963,
+      "mean_negative_log_likelihood": 1.8154447977909152,
+      "expected_calibration_error": 0.03170803733552812,
+      "mean_latency_seconds": 0.02868298124680763
     }
   }
 }

@@ -9,7 +9,7 @@ from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 
-from scripts.common import load_object, safe_model_name
+from scripts.common import load_object, non_reasoning_suite_metrics, safe_model_name
 
 
 def sha256(path: Path) -> str:
@@ -52,10 +52,15 @@ def main() -> None:
     parser.add_argument("manifest", type=Path)
     parser.add_argument("--model-id", required=True)
     parser.add_argument("--model-revision", required=True)
+    parser.add_argument(
+        "--model-type",
+        choices=("decision-model", "language-model", "classifier"),
+        required=True,
+    )
     parser.add_argument("--model-url")
     parser.add_argument("--adapter", required=True)
     parser.add_argument("--probability-source", required=True)
-    parser.add_argument("--artifact-uri", required=True)
+    parser.add_argument("--artifact-uri")
     parser.add_argument("--dataset-revision", required=True)
     parser.add_argument("--unsupported-rows", type=int, required=True)
     parser.add_argument("--error-rows", type=int, required=True)
@@ -85,12 +90,19 @@ def main() -> None:
     model = {
         "name": args.model_id,
         "revision": args.model_revision,
+        "model_type": args.model_type,
         "url": args.model_url,
         "adapter": args.adapter,
         "probability_source": args.probability_source,
         "open_weights": args.open_weights,
         "parameter_count": args.parameter_count,
     }
+    views = normalized_views(summary)
+    raw_path = args.summary.parent / "raw.jsonl"
+    suite_metrics = non_reasoning_suite_metrics(raw_path) if raw_path.is_file() else None
+    if suite_metrics is not None:
+        views["suite:DecisionBench(eng, v1)"] = suite_metrics
+
     record = {
         "schema_version": "decision-bench-result-v1",
         "benchmark_name": "DecisionBench",
@@ -109,15 +121,16 @@ def main() -> None:
         "mean_negative_log_likelihood": overall["mean_negative_log_likelihood"],
         "expected_calibration_error": overall["expected_calibration_error"],
         "mean_latency_seconds": overall["mean_latency_seconds"],
-        "views": normalized_views(summary),
-        "artifact": {
+        "views": views,
+        "submitted_at": args.submitted_at or datetime.now(UTC).isoformat(),
+    }
+    if args.artifact_uri:
+        record["artifact"] = {
             "uri": args.artifact_uri,
             "manifest_sha256": sha256(args.manifest),
             "summary_sha256": sha256(args.summary),
             "raw_sha256": files["raw.jsonl"],
-        },
-        "submitted_at": args.submitted_at or datetime.now(UTC).isoformat(),
-    }
+        }
     output_dir = root / "results" / safe_model_name(args.model_id) / args.model_revision
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "model_meta.json").write_text(

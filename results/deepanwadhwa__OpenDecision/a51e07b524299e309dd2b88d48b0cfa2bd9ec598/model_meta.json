@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-nli-entailment-v1",
+  "name": "deepanwadhwa/OpenDecision",
+  "model_type": "classifier",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "softmax-normalized-entailment-logits-over-candidates-v1",
+  "revision": "a51e07b524299e309dd2b88d48b0cfa2bd9ec598",
+  "url": "https://huggingface.co/MoritzLaurer/ModernBERT-large-zeroshot-v2.0"
+}

@@ -17,6 +17,7 @@
   "model": {
     "adapter": "jev-openrouter-decisions-v2",
     "name": "typesafe/jev-1.13",
+    "model_type": "decision-model",
     "open_weights": false,
     "parameter_count": null,
     "probability_source": "native-decisions-probability-distribution",
@@ -1221,6 +1222,13 @@
       "mean_latency_seconds": 0.26023537301857436,
       "mean_negative_log_likelihood": 0.6022660387073538,
       "rows": 2222
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 22700,
+      "accuracy": 0.7189867841409692,
+      "mean_negative_log_likelihood": 2.5314676051232907,
+      "expected_calibration_error": 0.1343882703688602,
+      "mean_latency_seconds": 0.27080966215625835
     }
   }
 }

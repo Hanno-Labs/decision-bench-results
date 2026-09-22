@@ -1,0 +1,1087 @@
+{
+  "artifact": {
+    "manifest_sha256": "53ef626085ba1f4693a60c6255d8b860143040b402cfc0d731e07cd55f317d56",
+    "raw_sha256": "5fe007632cbdda5ecda30d3b5c1ebc8af7ab7464046c8c305fbe25bdb663ecd0",
+    "summary_sha256": "44ca389cfe92385ff9758aa9a80d59e99164b03eb5e4790c0d0c4bcf8720b807",
+    "uri": "hf://buckets/Hanno-Labs/training/decision-bench/runs/kalm-nano-23900-20260922-r1/kalm-jev-nano"
+  },
+  "benchmark_name": "DecisionBench",
+  "benchmark_version": "1.0",
+  "coverage": 0.8706276150627615,
+  "dataset_repo": "Hanno-Labs/decision-bench",
+  "dataset_revision": "b7c8107e01ecb1aee7c7eaf5caee4a3ba9f59443",
+  "error_rows": 3092,
+  "expected_calibration_error": 0.07475014376043343,
+  "mean_latency_seconds": 0.7528880223925382,
+  "mean_negative_log_likelihood": 1.3189045702110092,
+  "model": {
+    "adapter": "jev-compatible-server-v1",
+    "name": "KaLM-Embedding/KaLM-Reranker-V1-Nano-R2",
+    "model_type": "classifier",
+    "open_weights": true,
+    "parameter_count": 786029296,
+    "probability_source": "native_probability_distribution",
+    "revision": "3902d6453ea915007dcbf88fbc8a1d7dd5f8df10",
+    "url": "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Nano-R2"
+  },
+  "primary_accuracy": 0.4187866108786611,
+  "requested_rows": 23900,
+  "schema_version": "decision-bench-result-v1",
+  "submitted_at": "2026-09-22T14:00:00+00:00",
+  "successful_rows": 20808,
+  "supported_accuracy": 0.4810169165705498,
+  "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
+  "unsupported_rows": 0,
+  "views": {
+    "candidate_count:10": {
+      "rows": 155,
+      "accuracy": 0.23225806451612904,
+      "mean_negative_log_likelihood": 2.220227638638976,
+      "expected_calibration_error": 0.0942846963027262,
+      "mean_latency_seconds": 0.3954876436010724
+    },
+    "candidate_count:11": {
+      "rows": 89,
+      "accuracy": 0.20224719101123595,
+      "mean_negative_log_likelihood": 2.2182016215554503,
+      "expected_calibration_error": 0.10081564854494059,
+      "mean_latency_seconds": 0.4594598546195147
+    },
+    "candidate_count:12": {
+      "rows": 61,
+      "accuracy": 0.21311475409836064,
+      "mean_negative_log_likelihood": 2.362521299349673,
+      "expected_calibration_error": 0.05947129662260639,
+      "mean_latency_seconds": 0.439135669974885
+    },
+    "candidate_count:128": {
+      "rows": 560,
+      "accuracy": 0.925,
+      "mean_negative_log_likelihood": 1.0543244218688521,
+      "expected_calibration_error": 0.41432166768867507,
+      "mean_latency_seconds": 2.085536915947783
+    },
+    "candidate_count:13": {
+      "rows": 33,
+      "accuracy": 0.21212121212121213,
+      "mean_negative_log_likelihood": 2.451648216985833,
+      "expected_calibration_error": 0.16153379589251377,
+      "mean_latency_seconds": 0.5170750064126244
+    },
+    "candidate_count:14": {
+      "rows": 29,
+      "accuracy": 0.1724137931034483,
+      "mean_negative_log_likelihood": 2.549321113220005,
+      "expected_calibration_error": 0.0978744235906286,
+      "mean_latency_seconds": 0.5018554337258483
+    },
+    "candidate_count:15": {
+      "rows": 26,
+      "accuracy": 0.23076923076923078,
+      "mean_negative_log_likelihood": 2.273477255660099,
+      "expected_calibration_error": 0.16752561193175744,
+      "mean_latency_seconds": 0.5367465958249971
+    },
+    "candidate_count:151": {
+      "rows": 1077,
+      "accuracy": 0.47168059424326836,
+      "mean_negative_log_likelihood": 2.7516291750280546,
+      "expected_calibration_error": 0.2676954214982758,
+      "mean_latency_seconds": 2.780984678450529
+    },
+    "candidate_count:16": {
+      "rows": 608,
+      "accuracy": 0.9259868421052632,
+      "mean_negative_log_likelihood": 0.479241460825844,
+      "expected_calibration_error": 0.1772966878248557,
+      "mean_latency_seconds": 1.6132172083407088
+    },
+    "candidate_count:17": {
+      "rows": 9,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 2.8409252088977968,
+      "expected_calibration_error": 0.18305448104855063,
+      "mean_latency_seconds": 0.6929705032768348
+    },
+    "candidate_count:18": {
+      "rows": 8,
+      "accuracy": 0.125,
+      "mean_negative_log_likelihood": 2.8527906251504795,
+      "expected_calibration_error": 0.17959765782747839,
+      "mean_latency_seconds": 0.5934334530611522
+    },
+    "candidate_count:19": {
+      "rows": 9,
+      "accuracy": 0.2222222222222222,
+      "mean_negative_log_likelihood": 2.739973913173478,
+      "expected_calibration_error": 0.12565240154146518,
+      "mean_latency_seconds": 0.7227131054840155
+    },
+    "candidate_count:192": {
+      "rows": 10,
+      "accuracy": 0.2,
+      "mean_negative_log_likelihood": 4.673527796046281,
+      "expected_calibration_error": 0.17603213723459746,
+      "mean_latency_seconds": 4.564704439416528
+    },
+    "candidate_count:2": {
+      "rows": 6364,
+      "accuracy": 0.4838152105593966,
+      "mean_negative_log_likelihood": 0.6690291359578205,
+      "expected_calibration_error": 0.14004026723497282,
+      "mean_latency_seconds": 0.21774588971200332
+    },
+    "candidate_count:20": {
+      "rows": 8,
+      "accuracy": 0.125,
+      "mean_negative_log_likelihood": 2.9145787706611364,
+      "expected_calibration_error": 0.12765477643757597,
+      "mean_latency_seconds": 0.9506771512678824
+    },
+    "candidate_count:21": {
+      "rows": 4,
+      "accuracy": 0.25,
+      "mean_negative_log_likelihood": 2.707624202219894,
+      "expected_calibration_error": 0.14600398881988508,
+      "mean_latency_seconds": 0.7940972513752058
+    },
+    "candidate_count:22": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.3890340411385766,
+      "expected_calibration_error": 0.09171823714513695,
+      "mean_latency_seconds": 0.354240789078176
+    },
+    "candidate_count:224": {
+      "rows": 8,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 5.004114487174839,
+      "expected_calibration_error": 0.017567227415154027,
+      "mean_latency_seconds": 5.419036122679245
+    },
+    "candidate_count:23": {
+      "rows": 2,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.2132455148397145,
+      "expected_calibration_error": 0.09442834260481164,
+      "mean_latency_seconds": 0.708374792477116
+    },
+    "candidate_count:24": {
+      "rows": 2,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 2.6645548398265078,
+      "expected_calibration_error": 0.09239997590211468,
+      "mean_latency_seconds": 1.2684829509817064
+    },
+    "candidate_count:255": {
+      "rows": 532,
+      "accuracy": 0.9154135338345865,
+      "mean_negative_log_likelihood": 1.903517865247419,
+      "expected_calibration_error": 0.693472144593644,
+      "mean_latency_seconds": 2.3816587398164812
+    },
+    "candidate_count:26": {
+      "rows": 4,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.2760776887534626,
+      "expected_calibration_error": 0.09010815675296904,
+      "mean_latency_seconds": 0.7707021879032254
+    },
+    "candidate_count:27": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.0342433374588946,
+      "expected_calibration_error": 0.14819247587860462,
+      "mean_latency_seconds": 0.3809139169752598
+    },
+    "candidate_count:29": {
+      "rows": 1,
+      "accuracy": 1.0,
+      "mean_negative_log_likelihood": 2.397616215669215,
+      "expected_calibration_error": 0.9090655367209801,
+      "mean_latency_seconds": 0.9202686231583357
+    },
+    "candidate_count:3": {
+      "rows": 581,
+      "accuracy": 0.4079173838209983,
+      "mean_negative_log_likelihood": 1.1244232726150962,
+      "expected_calibration_error": 0.1252780993479946,
+      "mean_latency_seconds": 0.14419122495914516
+    },
+    "candidate_count:30": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.195214368252601,
+      "expected_calibration_error": 0.06752790438366897,
+      "mean_latency_seconds": 1.1549698752351105
+    },
+    "candidate_count:31": {
+      "rows": 1,
+      "accuracy": 1.0,
+      "mean_negative_log_likelihood": 2.3978278418028562,
+      "expected_calibration_error": 0.9090847787937241,
+      "mean_latency_seconds": 1.1935823047533631
+    },
+    "candidate_count:32": {
+      "rows": 585,
+      "accuracy": 0.9658119658119658,
+      "mean_negative_log_likelihood": 0.4815751974004982,
+      "expected_calibration_error": 0.25917928740682183,
+      "mean_latency_seconds": 1.726237752993838
+    },
+    "candidate_count:36": {
+      "rows": 2,
+      "accuracy": 0.5,
+      "mean_negative_log_likelihood": 2.7642233522614275,
+      "expected_calibration_error": 0.4942747633692903,
+      "mean_latency_seconds": 1.3359188565518707
+    },
+    "candidate_count:38": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.05526582167728,
+      "expected_calibration_error": 0.08801343359399,
+      "mean_latency_seconds": 0.19674459006637335
+    },
+    "candidate_count:4": {
+      "rows": 3398,
+      "accuracy": 0.39523248969982344,
+      "mean_negative_log_likelihood": 1.2468918936889466,
+      "expected_calibration_error": 0.09405275061538626,
+      "mean_latency_seconds": 0.39603524924482847
+    },
+    "candidate_count:40": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.921394208446083,
+      "expected_calibration_error": 0.14189836622531654,
+      "mean_latency_seconds": 0.31816341122612357
+    },
+    "candidate_count:42": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 2.785651459274012,
+      "expected_calibration_error": 0.07921010029829521,
+      "mean_latency_seconds": 0.438172850292176
+    },
+    "candidate_count:46": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.2264536308030474,
+      "expected_calibration_error": 0.04788496864517597,
+      "mean_latency_seconds": 2.2171139591373503
+    },
+    "candidate_count:48": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.7650280523398636,
+      "expected_calibration_error": 0.04328158373523909,
+      "mean_latency_seconds": 0.6040008077397943
+    },
+    "candidate_count:5": {
+      "rows": 632,
+      "accuracy": 0.3022151898734177,
+      "mean_negative_log_likelihood": 1.6576663097801405,
+      "expected_calibration_error": 0.11449529536631145,
+      "mean_latency_seconds": 0.4262415108741025
+    },
+    "candidate_count:50": {
+      "rows": 2,
+      "accuracy": 0.5,
+      "mean_negative_log_likelihood": 3.3824633550496626,
+      "expected_calibration_error": 0.48979009785881084,
+      "mean_latency_seconds": 1.245208508335054
+    },
+    "candidate_count:51": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.759370190375151,
+      "expected_calibration_error": 0.049322732912245836,
+      "mean_latency_seconds": 2.0592553508467972
+    },
+    "candidate_count:52": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.799599749846754,
+      "expected_calibration_error": 0.03256231145135565,
+      "mean_latency_seconds": 2.058201137930155
+    },
+    "candidate_count:53": {
+      "rows": 8,
+      "accuracy": 0.125,
+      "mean_negative_log_likelihood": 3.8154485023712255,
+      "expected_calibration_error": 0.1214161016471677,
+      "mean_latency_seconds": 0.8680880553438328
+    },
+    "candidate_count:54": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.498149486702808,
+      "expected_calibration_error": 0.036492464684645946,
+      "mean_latency_seconds": 2.2079731300473213
+    },
+    "candidate_count:55": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.20771574575277,
+      "expected_calibration_error": 0.048790690842096036,
+      "mean_latency_seconds": 2.0614165072329342
+    },
+    "candidate_count:56": {
+      "rows": 2,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.422989995410552,
+      "expected_calibration_error": 0.06530068489403387,
+      "mean_latency_seconds": 0.7049781009554863
+    },
+    "candidate_count:58": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 3.6917267812408747,
+      "expected_calibration_error": 0.038610663613731076,
+      "mean_latency_seconds": 0.9355405969545245
+    },
+    "candidate_count:6": {
+      "rows": 526,
+      "accuracy": 0.25285171102661597,
+      "mean_negative_log_likelihood": 1.8971385799569225,
+      "expected_calibration_error": 0.1377577360142172,
+      "mean_latency_seconds": 0.3856579488180507
+    },
+    "candidate_count:60": {
+      "rows": 1,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 5.037424463654707,
+      "expected_calibration_error": 0.07663706333905654,
+      "mean_latency_seconds": 2.2175164623185992
+    },
+    "candidate_count:64": {
+      "rows": 580,
+      "accuracy": 0.9448275862068966,
+      "mean_negative_log_likelihood": 0.7777811140778365,
+      "expected_calibration_error": 0.34614215746164095,
+      "mean_latency_seconds": 1.8694196502734297
+    },
+    "candidate_count:7": {
+      "rows": 435,
+      "accuracy": 0.2482758620689655,
+      "mean_negative_log_likelihood": 2.0032091301218453,
+      "expected_calibration_error": 0.10234428683427757,
+      "mean_latency_seconds": 0.41964774381412173
+    },
+    "candidate_count:77": {
+      "rows": 1145,
+      "accuracy": 0.5589519650655022,
+      "mean_negative_log_likelihood": 2.123296578028019,
+      "expected_calibration_error": 0.25052956266670423,
+      "mean_latency_seconds": 1.4515629129903187
+    },
+    "candidate_count:8": {
+      "rows": 877,
+      "accuracy": 0.7069555302166477,
+      "mean_negative_log_likelihood": 0.8892255260287898,
+      "expected_calibration_error": 0.05528490901311019,
+      "mean_latency_seconds": 1.1578751059993464
+    },
+    "candidate_count:9": {
+      "rows": 2411,
+      "accuracy": 0.15387805889672335,
+      "mean_negative_log_likelihood": 2.1996684304787584,
+      "expected_calibration_error": 0.08665814252031125,
+      "mean_latency_seconds": 0.26464759893170725
+    },
+    "candidate_count:96": {
+      "rows": 10,
+      "accuracy": 0.1,
+      "mean_negative_log_likelihood": 4.439878031178712,
+      "expected_calibration_error": 0.07543582333751138,
+      "mean_latency_seconds": 4.380147818708792
+    },
+    "domain:agent_control": {
+      "rows": 376,
+      "accuracy": 0.39095744680851063,
+      "mean_negative_log_likelihood": 1.388594572555117,
+      "expected_calibration_error": 0.11270665437470612,
+      "mean_latency_seconds": 0.7354341706377454
+    },
+    "domain:browser_automation": {
+      "rows": 118,
+      "accuracy": 0.3305084745762712,
+      "mean_negative_log_likelihood": 2.045064124581047,
+      "expected_calibration_error": 0.07196603581081397,
+      "mean_latency_seconds": 0.6194701578696968
+    },
+    "domain:code_search": {
+      "rows": 100,
+      "accuracy": 0.38,
+      "mean_negative_log_likelihood": 0.9655934816208763,
+      "expected_calibration_error": 0.26050046300172824,
+      "mean_latency_seconds": 0.09455157411750406
+    },
+    "domain:coding_agents": {
+      "rows": 297,
+      "accuracy": 0.7441077441077442,
+      "mean_negative_log_likelihood": 0.746108332961537,
+      "expected_calibration_error": 0.12795537739297635,
+      "mean_latency_seconds": 0.15151797780635382
+    },
+    "domain:databases": {
+      "rows": 47,
+      "accuracy": 0.23404255319148937,
+      "mean_negative_log_likelihood": 1.9116572725029881,
+      "expected_calibration_error": 0.15618926990926918,
+      "mean_latency_seconds": 0.3581191873712901
+    },
+    "domain:ecommerce": {
+      "rows": 1070,
+      "accuracy": 0.3121495327102804,
+      "mean_negative_log_likelihood": 1.3988467544858283,
+      "expected_calibration_error": 0.09050088228696622,
+      "mean_latency_seconds": 0.129906475548763
+    },
+    "domain:evidence_reasoning": {
+      "rows": 97,
+      "accuracy": 0.28865979381443296,
+      "mean_negative_log_likelihood": 1.173767363982034,
+      "expected_calibration_error": 0.19022989197122114,
+      "mean_latency_seconds": 0.11189231840586386
+    },
+    "domain:finance": {
+      "rows": 398,
+      "accuracy": 0.18592964824120603,
+      "mean_negative_log_likelihood": 1.5294796084409512,
+      "expected_calibration_error": 0.17974562867101584,
+      "mean_latency_seconds": 0.19408193096312595
+    },
+    "domain:financial": {
+      "rows": 1145,
+      "accuracy": 0.5589519650655022,
+      "mean_negative_log_likelihood": 2.123296578028019,
+      "expected_calibration_error": 0.25052956266670423,
+      "mean_latency_seconds": 1.4515629129903187
+    },
+    "domain:games": {
+      "rows": 280,
+      "accuracy": 0.21428571428571427,
+      "mean_negative_log_likelihood": 2.0395817768551083,
+      "expected_calibration_error": 0.10918081419567718,
+      "mean_latency_seconds": 0.4587424233023609
+    },
+    "domain:general_assistant": {
+      "rows": 1077,
+      "accuracy": 0.47168059424326836,
+      "mean_negative_log_likelihood": 2.7516291750280546,
+      "expected_calibration_error": 0.2676954214982758,
+      "mean_latency_seconds": 2.780984678450529
+    },
+    "domain:home_automation": {
+      "rows": 100,
+      "accuracy": 0.4,
+      "mean_negative_log_likelihood": 1.5943676982623813,
+      "expected_calibration_error": 0.1644578718801297,
+      "mean_latency_seconds": 0.35461617713794114
+    },
+    "domain:knowledge_graphs": {
+      "rows": 26,
+      "accuracy": 0.19230769230769232,
+      "mean_negative_log_likelihood": 2.3510711744837582,
+      "expected_calibration_error": 0.09912995835632456,
+      "mean_latency_seconds": 0.5247420935282627
+    },
+    "domain:legal": {
+      "rows": 2032,
+      "accuracy": 0.4822834645669291,
+      "mean_negative_log_likelihood": 0.7195124677394651,
+      "expected_calibration_error": 0.06561648999709112,
+      "mean_latency_seconds": 0.07546369687357998
+    },
+    "domain:logic": {
+      "rows": 199,
+      "accuracy": 0.35175879396984927,
+      "mean_negative_log_likelihood": 1.1900393713738942,
+      "expected_calibration_error": 0.17636825663334232,
+      "mean_latency_seconds": 0.11047178476197111
+    },
+    "domain:online_safety": {
+      "rows": 2219,
+      "accuracy": 0.21045515998197387,
+      "mean_negative_log_likelihood": 1.1678137243126736,
+      "expected_calibration_error": 0.2559968943363961,
+      "mean_latency_seconds": 0.0885588409662005
+    },
+    "domain:privacy": {
+      "rows": 1762,
+      "accuracy": 0.23269012485811577,
+      "mean_negative_log_likelihood": 1.9581439421748013,
+      "expected_calibration_error": 0.15621935132763873,
+      "mean_latency_seconds": 0.2898802162857914
+    },
+    "domain:public_sector": {
+      "rows": 2222,
+      "accuracy": 0.9990999099909991,
+      "mean_negative_log_likelihood": 0.3328145381665898,
+      "expected_calibration_error": 0.19362291384659813,
+      "mean_latency_seconds": 2.114642201149526
+    },
+    "domain:robotics": {
+      "rows": 166,
+      "accuracy": 0.30120481927710846,
+      "mean_negative_log_likelihood": 1.8298564380606774,
+      "expected_calibration_error": 0.07945389695786859,
+      "mean_latency_seconds": 0.4242675695848842
+    },
+    "domain:search": {
+      "rows": 62,
+      "accuracy": 0.3548387096774194,
+      "mean_negative_log_likelihood": 1.7878193496658588,
+      "expected_calibration_error": 0.11508299728963145,
+      "mean_latency_seconds": 0.43017463278656287
+    },
+    "domain:social_media": {
+      "rows": 87,
+      "accuracy": 0.28735632183908044,
+      "mean_negative_log_likelihood": 1.7533621016452592,
+      "expected_calibration_error": 0.10106575117506464,
+      "mean_latency_seconds": 0.2956452520039661
+    },
+    "domain:software_agents": {
+      "rows": 2218,
+      "accuracy": 0.9368800721370604,
+      "mean_negative_log_likelihood": 0.8068798969418334,
+      "expected_calibration_error": 0.3274185248755512,
+      "mean_latency_seconds": 1.5112690839893794
+    },
+    "domain:software_engineering": {
+      "rows": 100,
+      "accuracy": 0.33,
+      "mean_negative_log_likelihood": 1.5776514120078828,
+      "expected_calibration_error": 0.09268356283683259,
+      "mean_latency_seconds": 0.2745861559966579
+    },
+    "domain:tax_documents": {
+      "rows": 75,
+      "accuracy": 0.2,
+      "mean_negative_log_likelihood": 4.174249522818586,
+      "expected_calibration_error": 0.1496038331007251,
+      "mean_latency_seconds": 4.683356244346748
+    },
+    "domain:technical": {
+      "rows": 2213,
+      "accuracy": 0.15047446904654316,
+      "mean_negative_log_likelihood": 2.1918120659692373,
+      "expected_calibration_error": 0.08422187383443962,
+      "mean_latency_seconds": 0.2576874343367353
+    },
+    "domain:web": {
+      "rows": 2222,
+      "accuracy": 0.49054905490549056,
+      "mean_negative_log_likelihood": 0.7379653726228199,
+      "expected_calibration_error": 0.1492962822321538,
+      "mean_latency_seconds": 0.0744153194548185
+    },
+    "domain:web_content": {
+      "rows": 100,
+      "accuracy": 0.71,
+      "mean_negative_log_likelihood": 0.6876923756947748,
+      "expected_calibration_error": 0.1742990862208264,
+      "mean_latency_seconds": 0.1289395524095744
+    },
+    "family:action_selection": {
+      "rows": 639,
+      "accuracy": 0.2676056338028169,
+      "mean_negative_log_likelihood": 1.9072844426799174,
+      "expected_calibration_error": 0.09057169222306855,
+      "mean_latency_seconds": 0.4084453268008706
+    },
+    "family:bounded_extraction": {
+      "rows": 1762,
+      "accuracy": 0.23269012485811577,
+      "mean_negative_log_likelihood": 1.9581439421748013,
+      "expected_calibration_error": 0.15621935132763873,
+      "mean_latency_seconds": 0.2898802162857914
+    },
+    "family:completion_assessment": {
+      "rows": 100,
+      "accuracy": 0.56,
+      "mean_negative_log_likelihood": 1.2553194280230984,
+      "expected_calibration_error": 0.08458555115804679,
+      "mean_latency_seconds": 0.2649620910640806
+    },
+    "family:content_classification": {
+      "rows": 87,
+      "accuracy": 0.28735632183908044,
+      "mean_negative_log_likelihood": 1.7533621016452592,
+      "expected_calibration_error": 0.10106575117506464,
+      "mean_latency_seconds": 0.2956452520039661
+    },
+    "family:content_moderation": {
+      "rows": 100,
+      "accuracy": 0.71,
+      "mean_negative_log_likelihood": 0.6876923756947748,
+      "expected_calibration_error": 0.1742990862208264,
+      "mean_latency_seconds": 0.1289395524095744
+    },
+    "family:context_management": {
+      "rows": 197,
+      "accuracy": 0.8375634517766497,
+      "mean_negative_log_likelihood": 0.4876255435901861,
+      "expected_calibration_error": 0.16228110569926213,
+      "mean_latency_seconds": 0.09393213351309149
+    },
+    "family:document_classification": {
+      "rows": 75,
+      "accuracy": 0.2,
+      "mean_negative_log_likelihood": 4.174249522818586,
+      "expected_calibration_error": 0.1496038331007251,
+      "mean_latency_seconds": 4.683356244346748
+    },
+    "family:document_record_classification": {
+      "rows": 2213,
+      "accuracy": 0.15047446904654316,
+      "mean_negative_log_likelihood": 2.1918120659692373,
+      "expected_calibration_error": 0.08422187383443962,
+      "mean_latency_seconds": 0.2576874343367353
+    },
+    "family:document_workflows": {
+      "rows": 2032,
+      "accuracy": 0.4822834645669291,
+      "mean_negative_log_likelihood": 0.7195124677394651,
+      "expected_calibration_error": 0.06561648999709112,
+      "mean_latency_seconds": 0.07546369687357998
+    },
+    "family:entity_alignment": {
+      "rows": 2222,
+      "accuracy": 0.9990999099909991,
+      "mean_negative_log_likelihood": 0.3328145381665898,
+      "expected_calibration_error": 0.19362291384659813,
+      "mean_latency_seconds": 2.114642201149526
+    },
+    "family:function_agent_skill_routing": {
+      "rows": 2218,
+      "accuracy": 0.9368800721370604,
+      "mean_negative_log_likelihood": 0.8068798969418334,
+      "expected_calibration_error": 0.3274185248755512,
+      "mean_latency_seconds": 1.5112690839893794
+    },
+    "family:guardrails_moderation": {
+      "rows": 2219,
+      "accuracy": 0.21045515998197387,
+      "mean_negative_log_likelihood": 1.1678137243126736,
+      "expected_calibration_error": 0.2559968943363961,
+      "mean_latency_seconds": 0.0885588409662005
+    },
+    "family:navigation": {
+      "rows": 26,
+      "accuracy": 0.19230769230769232,
+      "mean_negative_log_likelihood": 2.3510711744837582,
+      "expected_calibration_error": 0.09912995835632456,
+      "mean_latency_seconds": 0.5247420935282627
+    },
+    "family:reasoning": {
+      "rows": 497,
+      "accuracy": 0.23943661971830985,
+      "mean_negative_log_likelihood": 1.3253974216675033,
+      "expected_calibration_error": 0.16916393010877565,
+      "mean_latency_seconds": 0.1592431438831946
+    },
+    "family:record_classification": {
+      "rows": 47,
+      "accuracy": 0.23404255319148937,
+      "mean_negative_log_likelihood": 1.9116572725029881,
+      "expected_calibration_error": 0.15618926990926918,
+      "mean_latency_seconds": 0.3581191873712901
+    },
+    "family:retrieval_ranking": {
+      "rows": 3,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.052050781643555,
+      "expected_calibration_error": 0.10254782836549166,
+      "mean_latency_seconds": 0.33023689904560644
+    },
+    "family:retrieval_verification": {
+      "rows": 2222,
+      "accuracy": 0.49054905490549056,
+      "mean_negative_log_likelihood": 0.7379653726228199,
+      "expected_calibration_error": 0.1492962822321538,
+      "mean_latency_seconds": 0.0744153194548185
+    },
+    "family:review_scoring": {
+      "rows": 100,
+      "accuracy": 0.33,
+      "mean_negative_log_likelihood": 1.5776514120078828,
+      "expected_calibration_error": 0.09268356283683259,
+      "mean_latency_seconds": 0.2745861559966579
+    },
+    "family:risk_scoring": {
+      "rows": 100,
+      "accuracy": 0.34,
+      "mean_negative_log_likelihood": 1.4967770540140253,
+      "expected_calibration_error": 0.10353222289854486,
+      "mean_latency_seconds": 2.096151446569711
+    },
+    "family:routing": {
+      "rows": 139,
+      "accuracy": 0.3237410071942446,
+      "mean_negative_log_likelihood": 2.06763445813437,
+      "expected_calibration_error": 0.11719019696191382,
+      "mean_latency_seconds": 0.5241644063381572
+    },
+    "family:routing_triage": {
+      "rows": 2222,
+      "accuracy": 0.5166516651665166,
+      "mean_negative_log_likelihood": 2.4278484263489184,
+      "expected_calibration_error": 0.2586072165005202,
+      "mean_latency_seconds": 2.09593160849016
+    },
+    "family:rubric_scoring_prioritization": {
+      "rows": 1070,
+      "accuracy": 0.3121495327102804,
+      "mean_negative_log_likelihood": 1.3988467544858283,
+      "expected_calibration_error": 0.09050088228696622,
+      "mean_latency_seconds": 0.129906475548763
+    },
+    "family:safety_gating": {
+      "rows": 99,
+      "accuracy": 0.48484848484848486,
+      "mean_negative_log_likelihood": 0.876102083612427,
+      "expected_calibration_error": 0.2598822162112382,
+      "mean_latency_seconds": 0.08985352672335475
+    },
+    "family:semantic_filtering": {
+      "rows": 97,
+      "accuracy": 0.3917525773195876,
+      "mean_negative_log_likelihood": 0.8701360393521337,
+      "expected_calibration_error": 0.26538559603171497,
+      "mean_latency_seconds": 0.08726233726405759
+    },
+    "family:target_selection": {
+      "rows": 25,
+      "accuracy": 0.12,
+      "mean_negative_log_likelihood": 3.3692029823901364,
+      "expected_calibration_error": 0.10330162437667922,
+      "mean_latency_seconds": 1.242474442385137
+    },
+    "family:triage": {
+      "rows": 100,
+      "accuracy": 0.4,
+      "mean_negative_log_likelihood": 1.5943676982623813,
+      "expected_calibration_error": 0.1644578718801297,
+      "mean_latency_seconds": 0.35461617713794114
+    },
+    "family:verification": {
+      "rows": 197,
+      "accuracy": 0.3553299492385787,
+      "mean_negative_log_likelihood": 1.1319735629774335,
+      "expected_calibration_error": 0.1400308607503355,
+      "mean_latency_seconds": 0.1151174314433548
+    },
+    "overall": {
+      "rows": 20808,
+      "accuracy": 0.4810169165705498,
+      "mean_negative_log_likelihood": 1.3189045702110092,
+      "expected_calibration_error": 0.07475014376043343,
+      "mean_latency_seconds": 0.7528880223925382
+    },
+    "primitive:binary_classification": {
+      "rows": 5793,
+      "accuracy": 0.43552563438632835,
+      "mean_negative_log_likelihood": 0.7285936496584546,
+      "expected_calibration_error": 0.1546408891183127,
+      "mean_latency_seconds": 0.07520918921094363
+    },
+    "primitive:candidate_selection": {
+      "rows": 13419,
+      "accuracy": 0.5276101050748938,
+      "mean_negative_log_likelihood": 1.5481722725240805,
+      "expected_calibration_error": 0.08062793161890858,
+      "mean_latency_seconds": 1.1046113240055013
+    },
+    "primitive:ordinal_scoring": {
+      "rows": 1596,
+      "accuracy": 0.2543859649122807,
+      "mean_negative_log_likelihood": 1.5338969670918638,
+      "expected_calibration_error": 0.11988379733950294,
+      "mean_latency_seconds": 0.25540587720245284
+    },
+    "task:agent-call-retention": {
+      "rows": 100,
+      "accuracy": 0.75,
+      "mean_negative_log_likelihood": 0.6287523889795618,
+      "expected_calibration_error": 0.19036350056234205,
+      "mean_latency_seconds": 0.08467972595710307
+    },
+    "task:agent-readiness-assessment": {
+      "rows": 100,
+      "accuracy": 0.56,
+      "mean_negative_log_likelihood": 1.2553194280230984,
+      "expected_calibration_error": 0.08458555115804679,
+      "mean_latency_seconds": 0.2649620910640806
+    },
+    "task:agent-result-retention": {
+      "rows": 97,
+      "accuracy": 0.9278350515463918,
+      "mean_negative_log_likelihood": 0.34213395040526273,
+      "expected_calibration_error": 0.1632677056618626,
+      "mean_latency_seconds": 0.10347069800380118
+    },
+    "task:agent-skill-ranking": {
+      "rows": 47,
+      "accuracy": 0.23404255319148937,
+      "mean_negative_log_likelihood": 2.543135102782595,
+      "expected_calibration_error": 0.12114249864323762,
+      "mean_latency_seconds": 0.8054915517568588
+    },
+    "task:bounded_value": {
+      "rows": 1762,
+      "accuracy": 0.23269012485811577,
+      "mean_negative_log_likelihood": 1.9581439421748013,
+      "expected_calibration_error": 0.15621935132763873,
+      "mean_latency_seconds": 0.2898802162857914
+    },
+    "task:browser-action-selection": {
+      "rows": 93,
+      "accuracy": 0.3870967741935484,
+      "mean_negative_log_likelihood": 1.6891128187183881,
+      "expected_calibration_error": 0.07576949962943265,
+      "mean_latency_seconds": 0.45199588783866457
+    },
+    "task:browser-target-selection": {
+      "rows": 25,
+      "accuracy": 0.12,
+      "mean_negative_log_likelihood": 3.3692029823901364,
+      "expected_calibration_error": 0.10330162437667922,
+      "mean_latency_seconds": 1.242474442385137
+    },
+    "task:canonical_entity": {
+      "rows": 2222,
+      "accuracy": 0.9990999099909991,
+      "mean_negative_log_likelihood": 0.3328145381665898,
+      "expected_calibration_error": 0.19362291384659813,
+      "mean_latency_seconds": 2.114642201149526
+    },
+    "task:claim-evidence-verification": {
+      "rows": 97,
+      "accuracy": 0.28865979381443296,
+      "mean_negative_log_likelihood": 1.173767363982034,
+      "expected_calibration_error": 0.19022989197122114,
+      "mean_latency_seconds": 0.11189231840586386
+    },
+    "task:code-change-risk": {
+      "rows": 100,
+      "accuracy": 0.33,
+      "mean_negative_log_likelihood": 1.5776514120078828,
+      "expected_calibration_error": 0.09268356283683259,
+      "mean_latency_seconds": 0.2745861559966579
+    },
+    "task:codebase-result-ranking": {
+      "rows": 3,
+      "accuracy": 0.0,
+      "mean_negative_log_likelihood": 4.052050781643555,
+      "expected_calibration_error": 0.10254782836549166,
+      "mean_latency_seconds": 0.33023689904560644
+    },
+    "task:contains_threat": {
+      "rows": 1121,
+      "accuracy": 0.15789473684210525,
+      "mean_negative_log_likelihood": 0.7784358831746149,
+      "expected_calibration_error": 0.38811919989252813,
+      "mean_latency_seconds": 0.07414630302215572
+    },
+    "task:database-row-classification": {
+      "rows": 47,
+      "accuracy": 0.23404255319148937,
+      "mean_negative_log_likelihood": 1.9116572725029881,
+      "expected_calibration_error": 0.15618926990926918,
+      "mean_latency_seconds": 0.3581191873712901
+    },
+    "task:dom-ad-detection": {
+      "rows": 100,
+      "accuracy": 0.71,
+      "mean_negative_log_likelihood": 0.6876923756947748,
+      "expected_calibration_error": 0.1742990862208264,
+      "mean_latency_seconds": 0.1289395524095744
+    },
+    "task:drone-tactical-action": {
+      "rows": 100,
+      "accuracy": 0.31,
+      "mean_negative_log_likelihood": 1.7832880004000098,
+      "expected_calibration_error": 0.10252752207408887,
+      "mean_latency_seconds": 0.39272837731521576
+    },
+    "task:finqa-numerical-reasoning": {
+      "rows": 298,
+      "accuracy": 0.1644295302013423,
+      "mean_negative_log_likelihood": 1.4157875290783362,
+      "expected_calibration_error": 0.16608655002940753,
+      "mean_latency_seconds": 0.19181193739032035
+    },
+    "task:folio-logical-inference": {
+      "rows": 199,
+      "accuracy": 0.35175879396984927,
+      "mean_negative_log_likelihood": 1.1900393713738942,
+      "expected_calibration_error": 0.17636825663334232,
+      "mean_latency_seconds": 0.11047178476197111
+    },
+    "task:game-goal-selection": {
+      "rows": 100,
+      "accuracy": 0.32,
+      "mean_negative_log_likelihood": 1.6873249053812613,
+      "expected_calibration_error": 0.12417483094359409,
+      "mean_latency_seconds": 0.4192308221757412
+    },
+    "task:graph-edge-selection": {
+      "rows": 26,
+      "accuracy": 0.19230769230769232,
+      "mean_negative_log_likelihood": 2.3510711744837582,
+      "expected_calibration_error": 0.09912995835632456,
+      "mean_latency_seconds": 0.5247420935282627
+    },
+    "task:home-alert-triage": {
+      "rows": 100,
+      "accuracy": 0.4,
+      "mean_negative_log_likelihood": 1.5943676982623813,
+      "expected_calibration_error": 0.1644578718801297,
+      "mean_latency_seconds": 0.35461617713794114
+    },
+    "task:patent_section": {
+      "rows": 2213,
+      "accuracy": 0.15047446904654316,
+      "mean_negative_log_likelihood": 2.1918120659692373,
+      "expected_calibration_error": 0.08422187383443962,
+      "mean_latency_seconds": 0.2576874343367353
+    },
+    "task:platformer-control-selection": {
+      "rows": 100,
+      "accuracy": 0.16,
+      "mean_negative_log_likelihood": 2.16437729715003,
+      "expected_calibration_error": 0.16016770344422168,
+      "mean_latency_seconds": 0.353201117310673
+    },
+    "task:relevance": {
+      "rows": 2222,
+      "accuracy": 0.49054905490549056,
+      "mean_negative_log_likelihood": 0.7379653726228199,
+      "expected_calibration_error": 0.1492962822321538,
+      "mean_latency_seconds": 0.0744153194548185
+    },
+    "task:relevance_score": {
+      "rows": 1070,
+      "accuracy": 0.3121495327102804,
+      "mean_negative_log_likelihood": 1.3988467544858283,
+      "expected_calibration_error": 0.09050088228696622,
+      "mean_latency_seconds": 0.129906475548763
+    },
+    "task:robot-skill-selection": {
+      "rows": 66,
+      "accuracy": 0.2878787878787879,
+      "mean_negative_log_likelihood": 1.9004146769404773,
+      "expected_calibration_error": 0.08397005990143222,
+      "mean_latency_seconds": 0.47205422453892726
+    },
+    "task:route": {
+      "rows": 2222,
+      "accuracy": 0.5166516651665166,
+      "mean_negative_log_likelihood": 2.4278484263489184,
+      "expected_calibration_error": 0.2586072165005202,
+      "mean_latency_seconds": 2.09593160849016
+    },
+    "task:runtime-outcome-verification": {
+      "rows": 100,
+      "accuracy": 0.42,
+      "mean_negative_log_likelihood": 1.0914335760029708,
+      "expected_calibration_error": 0.12040528073941432,
+      "mean_latency_seconds": 0.11824579108972103
+    },
+    "task:search-plan-routing": {
+      "rows": 62,
+      "accuracy": 0.3548387096774194,
+      "mean_negative_log_likelihood": 1.7878193496658588,
+      "expected_calibration_error": 0.11508299728963145,
+      "mean_latency_seconds": 0.43017463278656287
+    },
+    "task:semantic-line-match": {
+      "rows": 97,
+      "accuracy": 0.3917525773195876,
+      "mean_negative_log_likelihood": 0.8701360393521337,
+      "expected_calibration_error": 0.26538559603171497,
+      "mean_latency_seconds": 0.08726233726405759
+    },
+    "task:social-post-filtering": {
+      "rows": 87,
+      "accuracy": 0.28735632183908044,
+      "mean_negative_log_likelihood": 1.7533621016452592,
+      "expected_calibration_error": 0.10106575117506464,
+      "mean_latency_seconds": 0.2956452520039661
+    },
+    "task:strategy-command-selection": {
+      "rows": 80,
+      "accuracy": 0.15,
+      "mean_negative_log_likelihood": 2.323908465828764,
+      "expected_calibration_error": 0.12738707647238248,
+      "mean_latency_seconds": 0.6400585572002455
+    },
+    "task:tax-document-page-classification": {
+      "rows": 75,
+      "accuracy": 0.2,
+      "mean_negative_log_likelihood": 4.174249522818586,
+      "expected_calibration_error": 0.1496038331007251,
+      "mean_latency_seconds": 4.683356244346748
+    },
+    "task:tool-action-impact": {
+      "rows": 100,
+      "accuracy": 0.34,
+      "mean_negative_log_likelihood": 1.4967770540140253,
+      "expected_calibration_error": 0.10353222289854486,
+      "mean_latency_seconds": 2.096151446569711
+    },
+    "task:tool-call-routing": {
+      "rows": 30,
+      "accuracy": 0.4,
+      "mean_negative_log_likelihood": 1.9009680056870735,
+      "expected_calibration_error": 0.2568205349090735,
+      "mean_latency_seconds": 0.27766407718881964
+    },
+    "task:tool-safety-gate": {
+      "rows": 99,
+      "accuracy": 0.48484848484848486,
+      "mean_negative_log_likelihood": 0.876102083612427,
+      "expected_calibration_error": 0.2598822162112382,
+      "mean_latency_seconds": 0.08985352672335475
+    },
+    "task:tool_route": {
+      "rows": 2218,
+      "accuracy": 0.9368800721370604,
+      "mean_negative_log_likelihood": 0.8068798969418334,
+      "expected_calibration_error": 0.3274185248755512,
+      "mean_latency_seconds": 1.5112690839893794
+    },
+    "task:toxicity_severity": {
+      "rows": 1098,
+      "accuracy": 0.2641165755919854,
+      "mean_negative_log_likelihood": 1.5653479318862291,
+      "expected_calibration_error": 0.12110699950176566,
+      "mean_latency_seconds": 0.10327328088903674
+    },
+    "task:trading-action-selection": {
+      "rows": 100,
+      "accuracy": 0.25,
+      "mean_negative_log_likelihood": 1.8682820049415434,
+      "expected_calibration_error": 0.25824750302238475,
+      "mean_latency_seconds": 0.20084651181008667
+    },
+    "task:workflow_decision": {
+      "rows": 2032,
+      "accuracy": 0.4822834645669291,
+      "mean_negative_log_likelihood": 0.7195124677394651,
+      "expected_calibration_error": 0.06561648999709112,
+      "mean_latency_seconds": 0.07546369687357998
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 20311,
+      "accuracy": 0.48692826547191176,
+      "mean_negative_log_likelihood": 1.3187456933870105,
+      "expected_calibration_error": 0.0746821023982468,
+      "mean_latency_seconds": 0.7674142153234201
+    }
+  }
+}

@@ -8,7 +8,7 @@
     "schema_version", "benchmark_name", "benchmark_version", "dataset_repo",
     "dataset_revision", "task_spec_sha256", "model", "requested_rows",
     "successful_rows", "unsupported_rows", "error_rows", "coverage",
-    "primary_accuracy", "supported_accuracy", "views", "artifact", "submitted_at"
+    "primary_accuracy", "supported_accuracy", "views", "submitted_at"
   ],
   "properties": {
     "schema_version": {"const": "decision-bench-result-v1"},
@@ -41,10 +41,13 @@
     "model": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["name", "revision", "adapter", "probability_source"],
+      "required": ["name", "revision", "model_type", "adapter", "probability_source"],
       "properties": {
         "name": {"type": "string", "minLength": 1},
         "revision": {"type": "string", "minLength": 1},
+        "model_type": {
+          "enum": ["decision-model", "language-model", "classifier"]
+        },
         "url": {"type": ["string", "null"]},
         "adapter": {"type": "string", "minLength": 1},
         "probability_source": {"type": "string", "minLength": 1},

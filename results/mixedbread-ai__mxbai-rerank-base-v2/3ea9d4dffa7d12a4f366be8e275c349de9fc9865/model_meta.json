@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "name": "mixedbread-ai/mxbai-rerank-base-v2",
+  "model_type": "classifier",
+  "open_weights": true,
+  "parameter_count": 494032768,
+  "probability_source": "native_probability_distribution",
+  "revision": "3ea9d4dffa7d12a4f366be8e275c349de9fc9865",
+  "url": "https://huggingface.co/mixedbread-ai/mxbai-rerank-base-v2"
+}

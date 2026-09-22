@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "name": "Alibaba-NLP/gte-reranker-modernbert-base",
+  "model_type": "classifier",
+  "open_weights": true,
+  "parameter_count": 149605633,
+  "probability_source": "native_probability_distribution",
+  "revision": "f7481e6055501a30fb19d090657df9ec1f79ab2c",
+  "url": "https://huggingface.co/Alibaba-NLP/gte-reranker-modernbert-base"
+}

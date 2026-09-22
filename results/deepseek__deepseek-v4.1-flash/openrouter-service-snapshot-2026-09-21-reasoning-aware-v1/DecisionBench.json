@@ -7,12 +7,13 @@
   "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
   "model": {
     "name": "deepseek/deepseek-v4.1-flash",
+    "model_type": "language-model",
     "revision": "openrouter-service-snapshot-2026-09-21-reasoning-aware-v1",
-    "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
     "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
     "probability_source": "model-emitted-complete-candidate-probability-vector",
-    "open_weights": false,
-    "parameter_count": null
+    "open_weights": true,
+    "parameter_count": 552000000000
   },
   "requested_rows": 23900,
   "successful_rows": 23852,
@@ -1214,6 +1215,13 @@
       "mean_negative_log_likelihood": 1.5915025474415914,
       "expected_calibration_error": 0.13223256753059362,
       "mean_latency_seconds": 2.5877681826253887
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 22652,
+      "accuracy": 0.7083259756312908,
+      "mean_negative_log_likelihood": 2.486917158132813,
+      "expected_calibration_error": 0.12021479369841218,
+      "mean_latency_seconds": 7.46432112945281
     }
   },
   "artifact": {

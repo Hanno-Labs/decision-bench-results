@@ -7,6 +7,7 @@
   "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
   "model": {
     "name": "openai/gpt-5.6-luna",
+    "model_type": "language-model",
     "revision": "openrouter-service-snapshot-2026-09-21-reasoning-aware-v1",
     "url": "https://openrouter.ai/openai/gpt-5.6-luna",
     "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
@@ -1214,6 +1215,13 @@
       "mean_negative_log_likelihood": 0.7837833175945748,
       "expected_calibration_error": 0.1530343348808552,
       "mean_latency_seconds": 1.0932610005028813
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 22690,
+      "accuracy": 0.6907007492287351,
+      "mean_negative_log_likelihood": 3.2748393043704316,
+      "expected_calibration_error": 0.20768343431630404,
+      "mean_latency_seconds": 1.6837250618788435
     }
   },
   "artifact": {
