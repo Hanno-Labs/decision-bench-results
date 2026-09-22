@@ -29,5 +29,6 @@ results/<model-name>/<immutable-revision>/
 └── DecisionBench.json
 ```
 
-Each compact record points to complete row-level artifacts in durable storage. Unsupported and
-error rows count as misses in the primary leaderboard score.
+Each compact record contains the reviewed metrics and immutable model and dataset identities. A
+submission may also point to complete row-level artifacts in durable storage. Unsupported and error
+rows count as misses in the primary leaderboard score.

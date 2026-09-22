@@ -55,7 +55,7 @@ def main() -> None:
     parser.add_argument("--model-url")
     parser.add_argument("--adapter", required=True)
     parser.add_argument("--probability-source", required=True)
-    parser.add_argument("--artifact-uri", required=True)
+    parser.add_argument("--artifact-uri")
     parser.add_argument("--dataset-revision", required=True)
     parser.add_argument("--unsupported-rows", type=int, required=True)
     parser.add_argument("--error-rows", type=int, required=True)
@@ -110,14 +110,15 @@ def main() -> None:
         "expected_calibration_error": overall["expected_calibration_error"],
         "mean_latency_seconds": overall["mean_latency_seconds"],
         "views": normalized_views(summary),
-        "artifact": {
+        "submitted_at": args.submitted_at or datetime.now(UTC).isoformat(),
+    }
+    if args.artifact_uri:
+        record["artifact"] = {
             "uri": args.artifact_uri,
             "manifest_sha256": sha256(args.manifest),
             "summary_sha256": sha256(args.summary),
             "raw_sha256": files["raw.jsonl"],
-        },
-        "submitted_at": args.submitted_at or datetime.now(UTC).isoformat(),
-    }
+        }
     output_dir = root / "results" / safe_model_name(args.model_id) / args.model_revision
     output_dir.mkdir(parents=True, exist_ok=True)
     (output_dir / "model_meta.json").write_text(

@@ -31,7 +31,7 @@ def leaderboard_rows(root: Path) -> list[dict[str, Any]]:
     for path in result_paths(root):
         result = load_object(path)
         model = result["model"]
-        artifact = result["artifact"]
+        artifact = result.get("artifact")
         for view, metrics in result["views"].items():
             view_kind, separator, view_name = str(view).partition(":")
             if not separator:
@@ -68,8 +68,10 @@ def leaderboard_rows(root: Path) -> list[dict[str, Any]]:
                         "expected_calibration_error"
                     ),
                     "mean_latency_seconds": metrics.get("mean_latency_seconds"),
-                    "artifact_uri": artifact["uri"],
-                    "artifact_manifest_sha256": artifact["manifest_sha256"],
+                    "artifact_uri": artifact["uri"] if artifact else None,
+                    "artifact_manifest_sha256": (
+                        artifact["manifest_sha256"] if artifact else None
+                    ),
                     "result_path": str(path.relative_to(root)),
                 }
             )
