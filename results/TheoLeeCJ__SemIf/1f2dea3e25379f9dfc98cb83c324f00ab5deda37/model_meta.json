@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "TheoLeeCJ/SemIf",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "option-letter-logit-softmax",
+  "revision": "1f2dea3e25379f9dfc98cb83c324f00ab5deda37",
+  "url": "https://github.com/TheoLeeCJ/SemIf"
+}
