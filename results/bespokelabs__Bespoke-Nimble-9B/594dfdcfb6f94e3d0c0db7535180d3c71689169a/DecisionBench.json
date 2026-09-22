@@ -570,6 +570,13 @@
       "mean_latency_seconds": 0.0403494556856081,
       "mean_negative_log_likelihood": 3.1190704076168894,
       "rows": 1698
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 17521,
+      "accuracy": 0.7188516637178243,
+      "mean_negative_log_likelihood": 1.2493707498913835,
+      "expected_calibration_error": 0.1723796419016056,
+      "mean_latency_seconds": 0.06560119846660722
     }
   }
 }

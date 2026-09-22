@@ -1214,6 +1214,13 @@
       "mean_negative_log_likelihood": 0.20590323314592987,
       "expected_calibration_error": 0.03424618020541858,
       "mean_latency_seconds": 0.006786650265145127
+    },
+    "suite:DecisionBench(eng, v1)": {
+      "rows": 22700,
+      "accuracy": 0.8729074889867842,
+      "mean_negative_log_likelihood": 0.4328487960778014,
+      "expected_calibration_error": 0.03968286174969225,
+      "mean_latency_seconds": 0.03725128938921433
     }
   },
   "artifact": {
