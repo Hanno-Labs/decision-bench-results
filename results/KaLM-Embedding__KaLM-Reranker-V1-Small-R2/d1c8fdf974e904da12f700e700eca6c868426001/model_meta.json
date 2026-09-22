@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "classifier",
+  "name": "KaLM-Embedding/KaLM-Reranker-V1-Small-R2",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_probability_distribution",
+  "revision": "d1c8fdf974e904da12f700e700eca6c868426001",
+  "url": "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Small-R2"
+}
