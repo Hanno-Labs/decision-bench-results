@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "Mapika/decider-35b-a3b",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "option-slot-logit-softmax",
+  "revision": "d9783c58ad4fbff3a6030c8332d29738ec49d22a",
+  "url": "https://huggingface.co/Mapika/decider-35b-a3b"
+}
