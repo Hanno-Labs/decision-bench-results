@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "jqv",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "option_letter_logit_softmax",
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "url": "https://huggingface.co/Qwen/Qwen3-32B"
+}
