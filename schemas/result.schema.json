@@ -45,6 +45,9 @@
       "properties": {
         "name": {"type": "string", "minLength": 1},
         "revision": {"type": "string", "minLength": 1},
+        "model_type": {
+          "enum": ["decision-model", "language-model", "classifier"]
+        },
         "url": {"type": ["string", "null"]},
         "adapter": {"type": "string", "minLength": 1},
         "probability_source": {"type": "string", "minLength": 1},

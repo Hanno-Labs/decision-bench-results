@@ -117,6 +117,7 @@ def leaderboard_rows(root: Path) -> list[dict[str, Any]]:
                 {
                     "model": model["name"],
                     "revision": model["revision"],
+                    "model_type": model.get("model_type"),
                     "model_url": model.get("url"),
                     "adapter": model["adapter"],
                     "probability_source": model["probability_source"],

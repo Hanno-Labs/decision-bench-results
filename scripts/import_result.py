@@ -52,6 +52,11 @@ def main() -> None:
     parser.add_argument("manifest", type=Path)
     parser.add_argument("--model-id", required=True)
     parser.add_argument("--model-revision", required=True)
+    parser.add_argument(
+        "--model-type",
+        choices=("decision-model", "language-model", "classifier"),
+        required=True,
+    )
     parser.add_argument("--model-url")
     parser.add_argument("--adapter", required=True)
     parser.add_argument("--probability-source", required=True)
@@ -85,6 +90,7 @@ def main() -> None:
     model = {
         "name": args.model_id,
         "revision": args.model_revision,
+        "model_type": args.model_type,
         "url": args.model_url,
         "adapter": args.adapter,
         "probability_source": args.probability_source,
