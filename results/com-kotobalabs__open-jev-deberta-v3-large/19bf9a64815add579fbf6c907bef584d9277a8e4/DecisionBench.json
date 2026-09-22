@@ -17,6 +17,7 @@
   "model": {
     "adapter": "openjev-hf",
     "name": "com-kotobalabs/open-jev-deberta-v3-large",
+    "model_type": "decision-model",
     "open_weights": true,
     "parameter_count": 435000000,
     "probability_source": "native_grouped_logits_temperature_softmax",
