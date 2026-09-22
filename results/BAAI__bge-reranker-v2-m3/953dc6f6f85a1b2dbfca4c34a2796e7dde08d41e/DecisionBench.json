@@ -1,0 +1,43 @@
+{
+  "artifact": {
+    "manifest_sha256": "9d1b63003d02498f972afcf74faa7584bb9c4d354feb5637709db643c70d4613",
+    "raw_sha256": "f3463f8cb6a3b3fdf7195c6013086929e9874b707c4cb5a74a31713b284b67fb",
+    "summary_sha256": "ac9969cdc43e480e157d23bcc98f936bf2b8587c51ed9334a44b6743ecfdcae2",
+    "uri": "hf://buckets/Hanno-Labs/training/decision-bench/runs/bge-reranker-23900-20260922-r1/bge-reranker-v2-m3"
+  },
+  "benchmark_name": "DecisionBench",
+  "benchmark_version": "1.0",
+  "coverage": 1.0,
+  "dataset_repo": "Hanno-Labs/decision-bench",
+  "dataset_revision": "b7c8107e01ecb1aee7c7eaf5caee4a3ba9f59443",
+  "error_rows": 0,
+  "expected_calibration_error": 0.0768748506180512,
+  "mean_latency_seconds": 0.2951048031017169,
+  "mean_negative_log_likelihood": 1.5104562884378103,
+  "model": {
+    "adapter": "jev-compatible-server-v1",
+    "name": "BAAI/bge-reranker-v2-m3",
+    "open_weights": true,
+    "parameter_count": 567755777,
+    "probability_source": "native_probability_distribution",
+    "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+    "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3"
+  },
+  "primary_accuracy": 0.4902092050209205,
+  "requested_rows": 23900,
+  "schema_version": "decision-bench-result-v1",
+  "submitted_at": "2026-09-22T14:00:00+00:00",
+  "successful_rows": 23900,
+  "supported_accuracy": 0.4902092050209205,
+  "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
+  "unsupported_rows": 0,
+  "views": {
+    "overall": {
+      "accuracy": 0.4902092050209205,
+      "expected_calibration_error": 0.0768748506180512,
+      "mean_latency_seconds": 0.2951048031017169,
+      "mean_negative_log_likelihood": 1.5104562884378103,
+      "rows": 23900
+    }
+  }
+}

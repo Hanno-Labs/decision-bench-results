@@ -1,0 +1,9 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "name": "BAAI/bge-reranker-v2-m3",
+  "open_weights": true,
+  "parameter_count": 567755777,
+  "probability_source": "native_probability_distribution",
+  "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+  "url": "https://huggingface.co/BAAI/bge-reranker-v2-m3"
+}
