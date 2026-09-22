@@ -17,6 +17,7 @@
   "model": {
     "adapter": "nanojev-hf",
     "name": "C-Tianyu/NanoJev",
+    "model_type": "decision-model",
     "open_weights": true,
     "parameter_count": 600000000,
     "probability_source": "native_candidate_logits_fp32_softmax",
