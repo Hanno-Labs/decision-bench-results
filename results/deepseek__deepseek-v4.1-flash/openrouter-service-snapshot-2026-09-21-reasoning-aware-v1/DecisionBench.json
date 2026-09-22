@@ -8,10 +8,10 @@
   "model": {
     "name": "deepseek/deepseek-v4.1-flash",
     "revision": "openrouter-service-snapshot-2026-09-21-reasoning-aware-v1",
-    "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
     "adapter": "openrouter-chat-completions-json-schema-reasoning-aware-v1",
     "probability_source": "model-emitted-complete-candidate-probability-vector",
-    "open_weights": false,
+    "open_weights": true,
     "parameter_count": 552000000000
   },
   "requested_rows": 23900,

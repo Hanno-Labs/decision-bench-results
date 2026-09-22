@@ -11,7 +11,7 @@
     "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-0.6b",
     "adapter": "bosun-decision-prompt-v3-stable-slots",
     "probability_source": "native_full_candidate_logits",
-    "open_weights": false,
+    "open_weights": true,
     "parameter_count": 600000000
   },
   "requested_rows": 23900,
