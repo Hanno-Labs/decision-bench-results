@@ -2,7 +2,7 @@
   "adapter": "bosun-decision-prompt-v3-stable-slots",
   "name": "Hanno-Labs/bosun-v3.1-0.6b",
   "open_weights": false,
-  "parameter_count": null,
+  "parameter_count": 600000000,
   "probability_source": "native_full_candidate_logits",
   "revision": "aaa9dd06d4d6501b33df61942472fed9284bc5e6",
   "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-0.6b"

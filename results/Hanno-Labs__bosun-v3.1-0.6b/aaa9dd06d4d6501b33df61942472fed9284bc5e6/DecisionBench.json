@@ -12,7 +12,7 @@
     "adapter": "bosun-decision-prompt-v3-stable-slots",
     "probability_source": "native_full_candidate_logits",
     "open_weights": false,
-    "parameter_count": null
+    "parameter_count": 600000000
   },
   "requested_rows": 23900,
   "successful_rows": 23900,
