@@ -1,6 +1,7 @@
 {
   "adapter": "jev-compatible-server-nli-entailment-v1",
   "name": "opendecision",
+  "model_type": "classifier",
   "open_weights": true,
   "parameter_count": null,
   "probability_source": "softmax-normalized-entailment-logits-over-candidates-v1",
