@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "Mapika/decider-2b",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "option-slot-logit-softmax",
+  "revision": "fa996cea58e1c1d8d1ab4d7124154f303b017f95",
+  "url": "https://huggingface.co/Mapika/decider-2b"
+}
