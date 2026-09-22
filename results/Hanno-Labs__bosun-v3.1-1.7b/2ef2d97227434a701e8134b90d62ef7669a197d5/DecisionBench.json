@@ -11,8 +11,8 @@
     "url": "https://huggingface.co/Hanno-Labs/bosun-v3.1-1.7b",
     "adapter": "hf-decision-tokens",
     "probability_source": "native_full_candidate_logits",
-    "open_weights": false,
-    "parameter_count": null
+    "open_weights": true,
+    "parameter_count": 1700000000
   },
   "requested_rows": 23900,
   "successful_rows": 23900,
