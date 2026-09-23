@@ -3,8 +3,8 @@
   "model_type": "decision-model",
   "name": "razorback16/openjev",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 25823778864,
   "probability_source": "native-probability-distribution",
   "revision": "ec4ff3df205028f4e81c954c2227f9312b3ec2ea",
-  "url": "https://github.com/razorback16/openjev"
+  "url": "https://huggingface.co/nvidia/diffusiongemma-26B-A4B-it-NVFP4"
 }
