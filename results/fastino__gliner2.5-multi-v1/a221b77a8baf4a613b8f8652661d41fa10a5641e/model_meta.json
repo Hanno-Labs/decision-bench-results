@@ -3,7 +3,7 @@
   "model_type": "classifier",
   "name": "fastino/gliner2.5-multi-v1",
   "open_weights": true,
-  "parameter_count": 287355159,
+  "parameter_count": null,
   "probability_source": "native_probability_distribution",
   "revision": "a221b77a8baf4a613b8f8652661d41fa10a5641e",
   "url": "https://huggingface.co/fastino/gliner2.5-multi-v1"
