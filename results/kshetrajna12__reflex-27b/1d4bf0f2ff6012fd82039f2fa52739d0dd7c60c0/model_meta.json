@@ -1,6 +1,6 @@
 {
   "adapter": "jev-compatible-server-v1",
-  "model_type": "decision-model",
+  "model_type": "language-model",
   "name": "kshetrajna12/reflex-27b",
   "open_weights": true,
   "parameter_count": 27781427952,

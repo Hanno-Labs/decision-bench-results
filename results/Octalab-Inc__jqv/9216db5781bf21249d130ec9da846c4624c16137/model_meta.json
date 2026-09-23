@@ -1,6 +1,6 @@
 {
   "adapter": "jev-compatible-server-v1",
-  "model_type": "decision-model",
+  "model_type": "language-model",
   "name": "Octalab-Inc/jqv",
   "open_weights": true,
   "parameter_count": 32762123264,

@@ -8,7 +8,7 @@
   "model": {
     "name": "ekzhang/openjev-sglang",
     "revision": "1355db6a052410cfd62085d94b58866fd0f2c3c5",
-    "model_type": "decision-model",
+    "model_type": "language-model",
     "url": "https://huggingface.co/nvidia/Qwen3.6-35B-A3B-NVFP4",
     "adapter": "jev-compatible-server-native-systemone-grouped-v1",
     "probability_source": "native-with-anchored-wide-choice-reconstruction",

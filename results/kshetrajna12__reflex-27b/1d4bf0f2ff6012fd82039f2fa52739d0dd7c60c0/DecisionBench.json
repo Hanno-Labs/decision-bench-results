@@ -8,7 +8,7 @@
   "model": {
     "name": "kshetrajna12/reflex-27b",
     "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
-    "model_type": "decision-model",
+    "model_type": "language-model",
     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",
     "adapter": "jev-compatible-server-v1",
     "probability_source": "two_order_option_letter_logit_softmax",
