@@ -1,10 +1,10 @@
 {
-  "adapter": "native-djev-spark-v1",
+  "adapter": "native-djev-spark-v1-anchored-wide-choice",
   "model_type": "decision-model",
   "name": "mmastrac/djev-spark",
   "open_weights": true,
   "parameter_count": null,
-  "probability_source": "native_probability_distribution",
+  "probability_source": "native-with-anchored-wide-choice-reconstruction",
   "revision": "1444f3e927f83ba508e5b28a4fd4fdd9ecd0976b",
   "url": "https://github.com/mmastrac/djev-spark"
 }
