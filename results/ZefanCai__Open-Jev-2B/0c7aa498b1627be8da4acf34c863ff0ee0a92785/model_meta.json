@@ -1,5 +1,5 @@
 {
-  "adapter": "jev-compatible-server-v1",
+  "adapter": "jev-compatible-server-v1-overlong-input-truncation",
   "model_type": "decision-model",
   "name": "ZefanCai/Open-Jev-2B",
   "open_weights": true,
