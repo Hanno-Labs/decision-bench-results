@@ -1,10 +1,10 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "decision-model",
-  "name": "simplejev-qwen3.6-35b-a3b",
+  "name": "Octalab-Inc/jqv",
   "open_weights": true,
   "parameter_count": null,
   "probability_source": "option_letter_logit_softmax",
-  "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
-  "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+  "url": "https://huggingface.co/Qwen/Qwen3-32B"
 }

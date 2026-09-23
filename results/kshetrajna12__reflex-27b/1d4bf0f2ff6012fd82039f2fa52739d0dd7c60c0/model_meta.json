@@ -1,7 +1,7 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "decision-model",
-  "name": "reflex-27b",
+  "name": "kshetrajna12/reflex-27b",
   "open_weights": true,
   "parameter_count": null,
   "probability_source": "two_order_option_letter_logit_softmax",

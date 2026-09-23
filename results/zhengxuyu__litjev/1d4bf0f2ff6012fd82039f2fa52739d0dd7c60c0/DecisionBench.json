@@ -6,7 +6,7 @@
   "dataset_revision": "b7c8107e01ecb1aee7c7eaf5caee4a3ba9f59443",
   "task_spec_sha256": "a477586be2d19dc109c9f2479e3c455b76e6311758c05f42b5a0ca15f4c34b44",
   "model": {
-    "name": "litjev",
+    "name": "zhengxuyu/litjev",
     "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
     "model_type": "decision-model",
     "url": "https://huggingface.co/Qwen/Qwen3.8-27B",

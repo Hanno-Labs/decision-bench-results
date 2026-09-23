@@ -1,10 +1,10 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "decision-model",
-  "name": "simplejev-qwen3.8-27b",
+  "name": "featherless-ai/simplejev-qwen3.6-35b-a3b",
   "open_weights": true,
   "parameter_count": null,
   "probability_source": "option_letter_logit_softmax",
-  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
-  "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+  "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
+  "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"
 }

@@ -1,7 +1,7 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "decision-model",
-  "name": "litjev",
+  "name": "featherless-ai/simplejev-qwen3.8-27b",
   "open_weights": true,
   "parameter_count": null,
   "probability_source": "option_letter_logit_softmax",
