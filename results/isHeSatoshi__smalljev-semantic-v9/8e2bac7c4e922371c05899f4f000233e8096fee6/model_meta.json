@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "classifier",
+  "name": "isHeSatoshi/smalljev-semantic-v9",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_probability_distribution",
+  "revision": "8e2bac7c4e922371c05899f4f000233e8096fee6",
+  "url": "https://huggingface.co/isHeSatoshi/smalljev-semantic-v9"
+}
