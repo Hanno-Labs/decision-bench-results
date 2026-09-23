@@ -3,8 +3,8 @@
   "model_type": "decision-model",
   "name": "ekzhang/openjev-sglang",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 35951822704,
   "probability_source": "native-with-anchored-wide-choice-reconstruction",
   "revision": "1355db6a052410cfd62085d94b58866fd0f2c3c5",
-  "url": "https://github.com/ekzhang/openjev-sglang"
+  "url": "https://huggingface.co/nvidia/Qwen3.6-35B-A3B-NVFP4"
 }

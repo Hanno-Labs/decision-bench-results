@@ -13,7 +13,7 @@
     "adapter": "jev-compatible-server-v1",
     "probability_source": "native_probability_distribution",
     "open_weights": true,
-    "parameter_count": null
+    "parameter_count": 9653104368
   },
   "requested_rows": 23900,
   "successful_rows": 23900,

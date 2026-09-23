@@ -39,12 +39,19 @@ the benchmark's `noul`, `choice`, and `score` primitives with a native decision 
 scalar scorers. Architecture names and API access do not determine this field.
 
 Model names use an `owner/name` identity. For serving recipes without their own Hugging Face
-checkpoint, `owner` credits the upstream recipe project, while `model_meta.json`'s `url` and
-`revision` identify the exact base weights evaluated. A recipe's name must not imply that its
-author published separate model weights.
+checkpoint, `owner` credits the upstream recipe project. The `url` and `revision` identify the
+base weight snapshot when one is recorded; older recipe submissions may instead identify their
+source-code revision. The table below names the evaluated base checkpoint where verified. A
+recipe's name must not imply that its author published separate model weights.
+
+For quantized variants, `parameter_count` is the logical count of the source model, not
+the number of packed storage tensors in the quantized checkpoint.
 
 | Recipe result | Upstream project | Evaluated base checkpoint |
 |---|---|---|
+| `ekzhang/openjev-sglang` | [ekzhang/openjev-sglang](https://github.com/ekzhang/openjev-sglang) | `nvidia/Qwen3.6-35B-A3B-NVFP4` |
+| `razorback16/openjev` | [razorback16/openjev](https://github.com/razorback16/openjev) | `nvidia/diffusiongemma-26B-A4B-it-NVFP4` |
+| `TheoLeeCJ/SemIf` | [TheoLeeCJ/SemIf](https://github.com/TheoLeeCJ/SemIf) | `Qwen/Qwen3.5-4B` |
 | `Octalab-Inc/jqv` | [Octalab-Inc/jqv](https://github.com/Octalab-Inc/jqv) | `Qwen/Qwen3-32B` |
 | `zhengxuyu/litjev` | [zhengxuyu/litjev](https://github.com/zhengxuyu/litjev) | `Qwen/Qwen3.8-27B` |
 | `kshetrajna12/reflex-27b` | [kshetrajna12/reflex](https://github.com/kshetrajna12/reflex) | `Qwen/Qwen3.8-27B` |

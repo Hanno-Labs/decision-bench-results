@@ -3,7 +3,7 @@
   "model_type": "classifier",
   "name": "KaLM-Embedding/KaLM-Reranker-V1-Small-R2",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 2115977456,
   "probability_source": "native_probability_distribution",
   "revision": "d1c8fdf974e904da12f700e700eca6c868426001",
   "url": "https://huggingface.co/KaLM-Embedding/KaLM-Reranker-V1-Small-R2"

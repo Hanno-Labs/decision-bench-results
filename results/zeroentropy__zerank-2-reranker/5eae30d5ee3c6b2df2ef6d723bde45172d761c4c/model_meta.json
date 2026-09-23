@@ -3,7 +3,7 @@
   "model_type": "classifier",
   "name": "zeroentropy/zerank-2-reranker",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 4022468096,
   "probability_source": "native_probability_distribution",
   "revision": "5eae30d5ee3c6b2df2ef6d723bde45172d761c4c",
   "url": "https://huggingface.co/zeroentropy/zerank-2-reranker"

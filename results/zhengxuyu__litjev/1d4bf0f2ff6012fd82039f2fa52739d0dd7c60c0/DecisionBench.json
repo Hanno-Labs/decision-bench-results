@@ -13,7 +13,7 @@
     "adapter": "jev-compatible-server-v1",
     "probability_source": "option_letter_logit_softmax",
     "open_weights": true,
-    "parameter_count": null
+    "parameter_count": 27781427952
   },
   "requested_rows": 23900,
   "successful_rows": 18316,
