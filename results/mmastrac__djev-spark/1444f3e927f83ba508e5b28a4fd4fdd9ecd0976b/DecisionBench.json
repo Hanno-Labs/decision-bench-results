@@ -8,7 +8,7 @@
   "model": {
     "name": "mmastrac/djev-spark",
     "revision": "1444f3e927f83ba508e5b28a4fd4fdd9ecd0976b",
-    "model_type": "decision-model",
+    "model_type": "language-model",
     "url": "https://github.com/mmastrac/djev-spark",
     "adapter": "native-djev-spark-v1-anchored-wide-choice",
     "probability_source": "native-with-anchored-wide-choice-reconstruction",

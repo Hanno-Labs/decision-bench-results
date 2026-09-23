@@ -8,7 +8,8 @@
   "model": {
     "name": "razorback16/openjev",
     "revision": "ec4ff3df205028f4e81c954c2227f9312b3ec2ea",
-    "model_type": "decision-model",
+    "model_type": "language-model",
+    "base_model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
     "url": "https://huggingface.co/nvidia/diffusiongemma-26B-A4B-it-NVFP4",
     "adapter": "jev-compatible-server-native-systemone-v1",
     "probability_source": "native-probability-distribution",

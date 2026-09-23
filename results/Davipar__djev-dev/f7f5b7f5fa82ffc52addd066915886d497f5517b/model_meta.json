@@ -1,6 +1,7 @@
 {
   "adapter": "jev-compatible-server-v1",
-  "model_type": "decision-model",
+  "model_type": "language-model",
+  "base_model": "google/diffusiongemma-26B-A4B-it",
   "name": "Davipar/djev-dev",
   "open_weights": true,
   "parameter_count": 25823778864,

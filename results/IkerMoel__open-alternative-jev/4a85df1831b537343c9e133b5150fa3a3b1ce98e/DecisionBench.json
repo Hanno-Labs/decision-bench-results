@@ -8,7 +8,7 @@
   "model": {
     "name": "IkerMoel/open-alternative-jev",
     "revision": "4a85df1831b537343c9e133b5150fa3a3b1ce98e",
-    "model_type": "decision-model",
+    "model_type": "language-model",
     "url": "https://github.com/ikermoel/open-alternative-jev",
     "adapter": "jev-compatible-server-v1",
     "probability_source": "option-letter-logit-softmax",

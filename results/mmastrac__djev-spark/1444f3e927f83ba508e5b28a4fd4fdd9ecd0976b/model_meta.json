@@ -1,6 +1,6 @@
 {
   "adapter": "native-djev-spark-v1-anchored-wide-choice",
-  "model_type": "decision-model",
+  "model_type": "language-model",
   "name": "mmastrac/djev-spark",
   "open_weights": true,
   "parameter_count": null,
