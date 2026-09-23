@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-native-systemone-v1",
+  "model_type": "decision-model",
+  "name": "razorback16/openjev",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native-probability-distribution",
+  "revision": "ec4ff3df205028f4e81c954c2227f9312b3ec2ea",
+  "url": "https://github.com/razorback16/openjev"
+}
