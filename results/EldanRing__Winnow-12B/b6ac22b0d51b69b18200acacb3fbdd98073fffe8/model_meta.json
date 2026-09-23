@@ -1,10 +1,10 @@
 {
-  "adapter": "jev-compatible-server-v1",
+  "adapter": "jev-compatible-server-native-systemone-grouped-v1",
   "model_type": "decision-model",
   "name": "EldanRing/Winnow-12B",
   "open_weights": true,
   "parameter_count": null,
-  "probability_source": "native_probability_distribution",
+  "probability_source": "native-with-anchored-wide-choice-and-noul-adaptation",
   "revision": "b6ac22b0d51b69b18200acacb3fbdd98073fffe8",
   "url": "https://huggingface.co/EldanRing/Winnow-12B"
 }
