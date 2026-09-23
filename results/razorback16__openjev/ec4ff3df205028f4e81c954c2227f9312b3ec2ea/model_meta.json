@@ -1,7 +1,6 @@
 {
   "adapter": "jev-compatible-server-native-systemone-v1",
   "model_type": "language-model",
-  "base_model": "nvidia/diffusiongemma-26B-A4B-it-NVFP4",
   "name": "razorback16/openjev",
   "open_weights": true,
   "parameter_count": 25823778864,

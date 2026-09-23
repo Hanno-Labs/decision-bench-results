@@ -9,7 +9,6 @@
     "name": "Davipar/djev-dev",
     "revision": "f7f5b7f5fa82ffc52addd066915886d497f5517b",
     "model_type": "language-model",
-    "base_model": "google/diffusiongemma-26B-A4B-it",
     "url": "https://huggingface.co/google/diffusiongemma-26B-A4B-it",
     "adapter": "jev-compatible-server-v1",
     "probability_source": "native_probability_distribution",

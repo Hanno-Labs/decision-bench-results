@@ -1,7 +1,6 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "language-model",
-  "base_model": "Qwen/Qwen3.5-4B",
   "name": "TheoLeeCJ/SemIf",
   "open_weights": true,
   "parameter_count": 4659865088,

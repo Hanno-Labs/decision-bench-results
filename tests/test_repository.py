@@ -44,7 +44,6 @@ def test_result_without_artifact_is_valid_and_buildable(tmp_path: Path) -> None:
     rows = leaderboard_rows(tmp_path)
     assert rows
     assert all(row["model_type"] == model.get("model_type") for row in rows)
-    assert all(row["base_model"] == model.get("base_model") for row in rows)
     assert all(row["artifact_uri"] is None for row in rows)
     assert all(row["artifact_manifest_sha256"] is None for row in rows)
 

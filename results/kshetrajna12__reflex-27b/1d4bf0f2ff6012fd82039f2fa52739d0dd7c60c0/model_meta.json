@@ -1,7 +1,6 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "language-model",
-  "base_model": "Qwen/Qwen3.8-27B",
   "name": "kshetrajna12/reflex-27b",
   "open_weights": true,
   "parameter_count": 27781427952,

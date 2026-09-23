@@ -48,7 +48,6 @@
         "model_type": {
           "enum": ["decision-model", "language-model", "classifier"]
         },
-        "base_model": {"type": "string", "pattern": "^[^/]+/[^/]+$"},
         "url": {"type": ["string", "null"]},
         "adapter": {"type": "string", "minLength": 1},
         "probability_source": {"type": "string", "minLength": 1},

@@ -1,7 +1,6 @@
 {
   "adapter": "jev-compatible-server-native-systemone-grouped-v1",
   "model_type": "language-model",
-  "base_model": "nvidia/Qwen3.6-35B-A3B-NVFP4",
   "name": "ekzhang/openjev-sglang",
   "open_weights": true,
   "parameter_count": 35951822704,

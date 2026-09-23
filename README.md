@@ -38,8 +38,8 @@ the benchmark's `noul`, `choice`, and `score` primitives with a native decision 
 `language-model` for text-generating models; or `classifier` for fixed-purpose class, relevance, or
 scalar scorers. Architecture names and API access do not determine this field.
 Stock language models exposed through Jev-compatible servers remain `language-model`; the
-server contract does not turn their weights into a trained decision checkpoint. The optional
-`base_model` field identifies verified source weights for these recipe entries.
+server contract does not turn their weights into a trained decision checkpoint. The leaderboard
+can show underlying weights when the result URL identifies a base checkpoint.
 
 Model names use an `owner/name` identity. For serving recipes without their own Hugging Face
 checkpoint, `owner` credits the upstream recipe project. The `url` and `revision` identify the

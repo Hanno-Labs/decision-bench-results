@@ -1,7 +1,6 @@
 {
   "adapter": "jev-compatible-server-v1",
   "model_type": "language-model",
-  "base_model": "Qwen/Qwen3-32B",
   "name": "Octalab-Inc/jqv",
   "open_weights": true,
   "parameter_count": 32762123264,
