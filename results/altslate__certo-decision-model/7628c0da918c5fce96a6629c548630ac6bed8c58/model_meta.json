@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-certo-custom-head-v1",
+  "model_type": "decision-model",
+  "name": "altslate/certo-decision-model",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "custom-option-query-softmax-with-score-and-noul-adaptation",
+  "revision": "7628c0da918c5fce96a6629c548630ac6bed8c58",
+  "url": "https://huggingface.co/altslate/certo-decision-model"
+}
