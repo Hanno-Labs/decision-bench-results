@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "jaredpalmer/kev-0.6b",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_probability_distribution",
+  "revision": "dece6dba8d43f0f7ded45e9f5b9df12474d90843",
+  "url": "https://huggingface.co/jaredpalmer/kev-0.6b"
+}
