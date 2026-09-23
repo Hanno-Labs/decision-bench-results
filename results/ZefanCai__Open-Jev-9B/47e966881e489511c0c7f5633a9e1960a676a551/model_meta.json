@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1-tail4096",
+  "model_type": "decision-model",
+  "name": "ZefanCai/Open-Jev-9B",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "calibrated_scalar_head_option_softmax",
+  "revision": "47e966881e489511c0c7f5633a9e1960a676a551",
+  "url": "https://huggingface.co/ZefanCai/Open-Jev-9B"
+}
