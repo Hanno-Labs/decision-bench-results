@@ -3,7 +3,7 @@
   "model_type": "decision-model",
   "name": "Davipar/djev-dev",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 25823778864,
   "probability_source": "native_probability_distribution",
   "revision": "f7f5b7f5fa82ffc52addd066915886d497f5517b",
   "url": "https://huggingface.co/google/diffusiongemma-26B-A4B-it"

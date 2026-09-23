@@ -3,7 +3,7 @@
   "model_type": "decision-model",
   "name": "featherless-ai/simplejev-qwen3.6-35b-a3b",
   "open_weights": true,
-  "parameter_count": null,
+  "parameter_count": 35951822704,
   "probability_source": "option_letter_logit_softmax",
   "revision": "995ad96eacd98c81ed38be0c5b274b04031597b0",
   "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B"

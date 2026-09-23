@@ -19,7 +19,7 @@
     "name": "convaiinnovations/laya",
     "model_type": "decision-model",
     "open_weights": true,
-    "parameter_count": 421000000,
+    "parameter_count": 421293830,
     "probability_source": "native-decisions-probability-distribution",
     "revision": "1c5edc17a7acd8701df6fc341c0d179f1c62c982",
     "url": "https://huggingface.co/convaiinnovations/laya"

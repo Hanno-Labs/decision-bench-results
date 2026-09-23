@@ -19,7 +19,7 @@
     "name": "heman10x/rlcd-modernbert-151m",
     "model_type": "classifier",
     "open_weights": true,
-    "parameter_count": 151000000,
+    "parameter_count": 151378176,
     "probability_source": "native_probability_distribution",
     "revision": "8af2496eb63c7fa66d7d234e1f62629380030eb4",
     "url": "https://huggingface.co/heman10x/rlcd-modernbert-151m"
