@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "classifier",
+  "name": "FINAL-Bench/ZTC-Judge-9B",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "native_probability_distribution",
+  "revision": "05d154a56b6d48ea7f2d999cabbafae3f26734b9",
+  "url": "https://huggingface.co/FINAL-Bench/ZTC-Judge-9B"
+}
