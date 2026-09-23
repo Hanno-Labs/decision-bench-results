@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "reflex-27b",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "two_order_option_letter_logit_softmax",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "url": "https://huggingface.co/Qwen/Qwen3.8-27B"
+}
