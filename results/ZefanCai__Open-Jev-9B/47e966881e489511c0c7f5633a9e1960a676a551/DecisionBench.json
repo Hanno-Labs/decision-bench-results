@@ -10,21 +10,21 @@
     "revision": "47e966881e489511c0c7f5633a9e1960a676a551",
     "model_type": "decision-model",
     "url": "https://huggingface.co/ZefanCai/Open-Jev-9B",
-    "adapter": "jev-compatible-server-v1",
-    "probability_source": "native_probability_distribution",
+    "adapter": "jev-compatible-server-v1-tail4096",
+    "probability_source": "calibrated_scalar_head_option_softmax",
     "open_weights": true,
     "parameter_count": null
   },
   "requested_rows": 23900,
-  "successful_rows": 23828,
+  "successful_rows": 23900,
   "unsupported_rows": 0,
-  "error_rows": 72,
-  "coverage": 0.9969874476987448,
-  "primary_accuracy": 0.6789539748953974,
-  "supported_accuracy": 0.6810055397011918,
-  "mean_negative_log_likelihood": 1.2592879467260587,
-  "expected_calibration_error": 0.19644794514656977,
-  "mean_latency_seconds": 9.728753899807879,
+  "error_rows": 0,
+  "coverage": 1.0,
+  "primary_accuracy": 0.6806276150627615,
+  "supported_accuracy": 0.6806276150627615,
+  "mean_negative_log_likelihood": 1.257994595218488,
+  "expected_calibration_error": 0.1958993818667593,
+  "mean_latency_seconds": 9.74624917670989,
   "views": {
     "candidate_count:10": {
       "rows": 197,
@@ -118,11 +118,11 @@
       "mean_latency_seconds": 65.13415564534564
     },
     "candidate_count:2": {
-      "rows": 6922,
-      "accuracy": 0.6415775787344699,
-      "mean_negative_log_likelihood": 0.9675332570447077,
-      "expected_calibration_error": 0.24131638026908966,
-      "mean_latency_seconds": 2.3499113771869626
+      "rows": 6962,
+      "accuracy": 0.6411950588911233,
+      "mean_negative_log_likelihood": 0.9666099172824771,
+      "expected_calibration_error": 0.24120980471846587,
+      "mean_latency_seconds": 2.426374599761435
     },
     "candidate_count:20": {
       "rows": 22,
@@ -286,11 +286,11 @@
       "mean_latency_seconds": 36.19131247699261
     },
     "candidate_count:4": {
-      "rows": 4876,
-      "accuracy": 0.5371205906480722,
-      "mean_negative_log_likelihood": 1.8597980108072307,
-      "expected_calibration_error": 0.2312418891798091,
-      "mean_latency_seconds": 4.772851960314858
+      "rows": 4908,
+      "accuracy": 0.537082314588427,
+      "mean_negative_log_likelihood": 1.8532721460823678,
+      "expected_calibration_error": 0.2296556390613017,
+      "mean_latency_seconds": 4.842033444700183
     },
     "candidate_count:40": {
       "rows": 5,
@@ -622,11 +622,11 @@
       "mean_latency_seconds": 1.2025938989408314
     },
     "domain:multi_hop_search": {
-      "rows": 528,
-      "accuracy": 0.5473484848484849,
-      "mean_negative_log_likelihood": 0.9426752064219757,
-      "expected_calibration_error": 0.17965361922593384,
-      "mean_latency_seconds": 6.588398459416842
+      "rows": 600,
+      "accuracy": 0.5483333333333333,
+      "mean_negative_log_likelihood": 0.92915023354024,
+      "expected_calibration_error": 0.17316586272147752,
+      "mean_latency_seconds": 7.662136308860499
     },
     "domain:online_safety": {
       "rows": 2222,
@@ -804,11 +804,11 @@
       "mean_latency_seconds": 9.838302700407803
     },
     "family:reasoning": {
-      "rows": 1128,
-      "accuracy": 0.5771276595744681,
-      "mean_negative_log_likelihood": 0.9630284970220635,
-      "expected_calibration_error": 0.13020523471059836,
-      "mean_latency_seconds": 4.0958260663468
+      "rows": 1200,
+      "accuracy": 0.5758333333333333,
+      "mean_negative_log_likelihood": 0.9550448131451903,
+      "expected_calibration_error": 0.13032638401369873,
+      "mean_latency_seconds": 4.782249334652831
     },
     "family:record_classification": {
       "rows": 100,
@@ -902,25 +902,25 @@
       "mean_latency_seconds": 1.1072986146248878
     },
     "overall": {
-      "rows": 23828,
-      "accuracy": 0.6810055397011918,
-      "mean_negative_log_likelihood": 1.2592879467260587,
-      "expected_calibration_error": 0.19644794514656977,
-      "mean_latency_seconds": 9.728753899807879
+      "rows": 23900,
+      "accuracy": 0.6806276150627615,
+      "mean_negative_log_likelihood": 1.257994595218488,
+      "expected_calibration_error": 0.1958993818667593,
+      "mean_latency_seconds": 9.74624917670989
     },
     "primitive:binary_classification": {
-      "rows": 6348,
-      "accuracy": 0.6091682419659735,
-      "mean_negative_log_likelihood": 1.0502014568385671,
-      "expected_calibration_error": 0.26758739970559914,
-      "mean_latency_seconds": 0.6192114499850033
+      "rows": 6388,
+      "accuracy": 0.6089542892924233,
+      "mean_negative_log_likelihood": 1.0486775026406328,
+      "expected_calibration_error": 0.2673067453911183,
+      "mean_latency_seconds": 0.713382544639286
     },
     "primitive:candidate_selection": {
-      "rows": 15782,
-      "accuracy": 0.7426181726016982,
-      "mean_negative_log_likelihood": 1.2061418117805882,
-      "expected_calibration_error": 0.1831953167310286,
-      "mean_latency_seconds": 14.219065617768305
+      "rows": 15814,
+      "accuracy": 0.7421904641456937,
+      "mean_negative_log_likelihood": 1.2054391466926422,
+      "expected_calibration_error": 0.18283935063805645,
+      "mean_latency_seconds": 14.221422003775935
     },
     "primitive:ordinal_scoring": {
       "rows": 1698,
@@ -1070,18 +1070,18 @@
       "mean_latency_seconds": 3.4902634079009296
     },
     "task:musique-evidence-sufficiency": {
-      "rows": 360,
-      "accuracy": 0.5611111111111111,
-      "mean_negative_log_likelihood": 0.9013256769539717,
-      "expected_calibration_error": 0.24261596642150496,
-      "mean_latency_seconds": 3.536187126973851
+      "rows": 400,
+      "accuracy": 0.5625,
+      "mean_negative_log_likelihood": 0.8918757064014211,
+      "expected_calibration_error": 0.24311869775626416,
+      "mean_latency_seconds": 4.748401940903859
     },
     "task:musique-multihop-answer": {
-      "rows": 168,
-      "accuracy": 0.5178571428571429,
-      "mean_negative_log_likelihood": 1.0312813409962698,
-      "expected_calibration_error": 0.07535934808460094,
-      "mean_latency_seconds": 13.128851314651824
+      "rows": 200,
+      "accuracy": 0.52,
+      "mean_negative_log_likelihood": 1.0036992878178774,
+      "expected_calibration_error": 0.07039989817078574,
+      "mean_latency_seconds": 13.48960504477378
     },
     "task:patent_section": {
       "rows": 2223,
@@ -1226,9 +1226,9 @@
   },
   "artifact": {
     "uri": "hf://buckets/Hanno-Labs/training/decision-bench/runs/open-jev-zefan-9b-23900-20260922-r1/open-jev-zefan-9b",
-    "manifest_sha256": "39c440da5e6023027e80c2ceac837325faef1921ca81a21988d009bd3c492a75",
-    "summary_sha256": "07dca5b2ff8d840ebc7684a66793c225aecfd284047e2d9b426f54cb1c490122",
-    "raw_sha256": "0682bbb003af2e1a7d254024b2da8b6d9eccc58b19a50f0f924cbfbb2f995c0e"
+    "manifest_sha256": "d95f6c7f72bd94d7d66ff73f0340f0a8d61800356db6625d086f7d8aec63f551",
+    "summary_sha256": "17f0bf30fb26679221398347061a9d68ad9324bcbd01f6f4fbdf0c64b33d27af",
+    "raw_sha256": "9d500c84db7e365104ffb12aa4cbca8b495e20d6b6d4154bf9eaf4c33e888b76"
   },
-  "submitted_at": "2026-09-23T01:06:30.735097Z"
+  "submitted_at": "2026-09-23T04:26:05.417662Z"
 }
