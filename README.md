@@ -14,7 +14,7 @@ This repository is the reviewed, append-only result registry for
 | 📈 **[Leaderboard]** | Browse reviewed model results |
 | 📚 **[DecisionBench]** | Run evaluations and load result records |
 | 🧾 **[Submission guide]** | Validate and submit a new result |
-| 🐛 **[Issues]** | Report benchmark or result problems |
+| 🐛 **[Issues]** | Report bugs or request features for any DecisionBench component |
 
 [Leaderboard]: https://huggingface.co/spaces/Hanno-Labs/decision-bench-leaderboard
 [DecisionBench]: https://github.com/Hanno-Labs/decision-bench
