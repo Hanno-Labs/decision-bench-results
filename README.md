@@ -37,3 +37,16 @@ Each model declares its own reviewed `model_type`: `decision-model` for checkpoi
 the benchmark's `noul`, `choice`, and `score` primitives with a native decision output;
 `language-model` for text-generating models; or `classifier` for fixed-purpose class, relevance, or
 scalar scorers. Architecture names and API access do not determine this field.
+
+Model names use an `owner/name` identity. For serving recipes without their own Hugging Face
+checkpoint, `owner` credits the upstream recipe project, while `model_meta.json`'s `url` and
+`revision` identify the exact base weights evaluated. A recipe's name must not imply that its
+author published separate model weights.
+
+| Recipe result | Upstream project | Evaluated base checkpoint |
+|---|---|---|
+| `Octalab-Inc/jqv` | [Octalab-Inc/jqv](https://github.com/Octalab-Inc/jqv) | `Qwen/Qwen3-32B` |
+| `zhengxuyu/litjev` | [zhengxuyu/litjev](https://github.com/zhengxuyu/litjev) | `Qwen/Qwen3.8-27B` |
+| `kshetrajna12/reflex-27b` | [kshetrajna12/reflex](https://github.com/kshetrajna12/reflex) | `Qwen/Qwen3.8-27B` |
+| `featherless-ai/simplejev-qwen3.6-35b-a3b` | [featherless-ai/simple-jev](https://github.com/featherless-ai/simple-jev) | `Qwen/Qwen3.6-35B-A3B` |
+| `featherless-ai/simplejev-qwen3.8-27b` | [featherless-ai/simple-jev](https://github.com/featherless-ai/simple-jev) | `Qwen/Qwen3.8-27B` |
