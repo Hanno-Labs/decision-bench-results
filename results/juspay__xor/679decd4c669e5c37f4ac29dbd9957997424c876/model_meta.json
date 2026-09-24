@@ -1,0 +1,10 @@
+{
+  "adapter": "xor-serving-systemone-v1",
+  "model_type": "decision-model",
+  "name": "juspay/xor",
+  "open_weights": true,
+  "parameter_count": null,
+  "probability_source": "forward_reverse_option_letter_logprobs_calibrated_v1",
+  "revision": "679decd4c669e5c37f4ac29dbd9957997424c876",
+  "url": "https://huggingface.co/juspay/xor"
+}
