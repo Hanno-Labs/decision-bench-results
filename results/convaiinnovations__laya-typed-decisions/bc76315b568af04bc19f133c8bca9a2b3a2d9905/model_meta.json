@@ -1,0 +1,10 @@
+{
+  "adapter": "laya-native-build-sequence-v1",
+  "model_type": "decision-model",
+  "name": "convaiinnovations/laya-typed-decisions",
+  "open_weights": true,
+  "parameter_count": 421293830,
+  "probability_source": "native-option-marker-softmax",
+  "revision": "bc76315b568af04bc19f133c8bca9a2b3a2d9905",
+  "url": "https://huggingface.co/convaiinnovations/laya-typed-decisions"
+}
