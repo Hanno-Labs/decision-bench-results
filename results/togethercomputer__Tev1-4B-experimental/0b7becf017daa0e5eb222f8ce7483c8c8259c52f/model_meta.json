@@ -1,0 +1,10 @@
+{
+  "adapter": "tev1-qwen35-single-letter-choice-v1",
+  "model_type": "language-model",
+  "name": "togethercomputer/Tev1-4B-experimental",
+  "open_weights": null,
+  "parameter_count": null,
+  "probability_source": "softmax_over_allowed_option_letter_next_token_logits",
+  "revision": "0b7becf017daa0e5eb222f8ce7483c8c8259c52f",
+  "url": "https://huggingface.co/togethercomputer/Tev1-4B-experimental"
+}
