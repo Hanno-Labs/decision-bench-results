@@ -1,0 +1,10 @@
+{
+  "adapter": "mojev-hf",
+  "model_type": "decision-model",
+  "name": "MoLeMo-Lab/mojev",
+  "open_weights": null,
+  "parameter_count": 854036544,
+  "probability_source": "native_candidate_logits_softmax",
+  "revision": "0c8695b6252f4205907433d4e196a94f032e60c3",
+  "url": null
+}
