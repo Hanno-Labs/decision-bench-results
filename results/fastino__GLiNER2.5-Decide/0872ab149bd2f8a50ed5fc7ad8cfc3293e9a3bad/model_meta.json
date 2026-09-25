@@ -1,0 +1,10 @@
+{
+  "adapter": "gliner25_decide_classifier",
+  "model_type": "classifier",
+  "name": "fastino/GLiNER2.5-Decide",
+  "open_weights": null,
+  "parameter_count": null,
+  "probability_source": "raw_classification_logits_softmax",
+  "revision": "0872ab149bd2f8a50ed5fc7ad8cfc3293e9a3bad",
+  "url": null
+}
