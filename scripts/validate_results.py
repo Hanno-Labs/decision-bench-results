@@ -10,7 +10,7 @@ from jsonschema import Draft202012Validator
 
 from scripts.common import load_object, result_paths, safe_model_name
 
-ResultIdentity = tuple[str, str, str, str, str]
+ResultIdentity = tuple[str, str, str, str, str, tuple[str, ...]]
 
 
 def validate_result_file(
@@ -62,6 +62,7 @@ def validate_result_file(
         result["benchmark_name"],
         result["benchmark_version"],
         result["dataset_revision"],
+        tuple(sorted(result.get("tags", []))),
     )
     if identities is not None:
         if identity in identities:

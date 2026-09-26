@@ -1,3 +1,4 @@
+import json
 import shutil
 from pathlib import Path
 
@@ -30,6 +31,21 @@ def test_default_references_resolve_exactly() -> None:
         "typesafe/jev-1.13",
         "openai/gpt-5.6-luna",
     ]
+
+
+def test_reference_prefers_untagged_when_compact_exists(tmp_path: Path) -> None:
+    root = Path.cwd()
+    relative = _copy_result(
+        root, tmp_path, "typesafe__jev-1.13", "openrouter-service-snapshot-2026-09-21"
+    )
+    source = json.loads((tmp_path / relative).read_text())
+    (tmp_path / relative).with_name("DecisionBench--compact.json").write_text(
+        json.dumps({**source, "tags": ["compact"]})
+    )
+    reference = find_exact_reference(
+        load_results(tmp_path), "typesafe/jev-1.13", "openrouter-service-snapshot-2026-09-21"
+    )
+    assert not reference.get("tags")
 
 
 def test_changed_result_is_validated_and_compared(tmp_path: Path) -> None:

@@ -26,12 +26,19 @@ This repository is the reviewed, append-only result registry for
 ```text
 results/<model-name>/<immutable-revision>/
 ├── model_meta.json
-└── DecisionBench.json
+├── DecisionBench.json
+└── DecisionBench--compact.json  # optional tagged run
 ```
 
 Each compact record contains the reviewed metrics and immutable model and dataset identities. A
 submission may also point to complete row-level artifacts in durable storage. Unsupported and error
 rows count as misses in the primary leaderboard score.
+
+Result tags are optional. Existing results have no tags. A result tagged `compact` uses a
+shorter rendering of the same benchmark rows, preserving candidate meaning, gold labels,
+and scoring. Tagged results
+appear on the same leaderboard with a visible tag and can coexist with the untagged
+result for the same model revision.
 
 Each model declares its own reviewed `model_type`: `decision-model` for checkpoints trained across
 the benchmark's `noul`, `choice`, and `score` primitives with a native decision output;
