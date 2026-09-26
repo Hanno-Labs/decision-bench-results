@@ -1217,5 +1217,11 @@
       "mean_latency_seconds": 1.5869526727960772
     }
   },
-  "submitted_at": "2026-09-24T23:37:16.605433Z"
+  "artifact": {
+    "uri": "https://huggingface.co/datasets/mohit67890/imajev-decisionbench-runs/resolve/d28a139cf197034e185132c9ca97be3f4593be51/imajev-4b-1.0-712891d1/raw.jsonl",
+    "manifest_sha256": "30ec90e145c5ae45ffa06995f3865a40bae809aad21b31bad47634a7b0654400",
+    "summary_sha256": "f4850ca2663461fbaa044dae30e631e53a60c48cbc703d3d0d53f536a2fc197f",
+    "raw_sha256": "0a853fa963d782ccb9f465c0c7d1c4a8da0c4b517a4cfb8efa53eeba1c372264"
+  },
+  "submitted_at": "2026-09-26T14:03:12.852667Z"
 }
