@@ -1,0 +1,10 @@
+{
+  "adapter": "imajev-serving-systemone-v1",
+  "model_type": "decision-model",
+  "name": "mohit67890/imajev-4b",
+  "open_weights": true,
+  "parameter_count": 4782417408,
+  "probability_source": "trained_readout_4_rotation_mean_temperature_calibrated_v1",
+  "revision": "c9e5f132465da85d31735ec502d5557982671a7d",
+  "url": "https://huggingface.co/mohit67890/imajev-4b"
+}
