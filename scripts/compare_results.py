@@ -10,7 +10,7 @@ from typing import Any
 from jsonschema import Draft202012Validator
 
 from scripts.common import load_object, result_paths
-from scripts.validate_results import validate_result_file
+from scripts.validate_results import ResultIdentity, validate_result_file
 
 COMMENT_MARKER = "<!-- decision-bench-results-comparison -->"
 MAX_CHANGED_RESULTS = 20
@@ -39,7 +39,9 @@ def find_exact_reference(
     matches = [
         result
         for _, result in results
-        if result["model"]["name"] == name and result["model"]["revision"] == revision
+        if result["model"]["name"] == name
+        and result["model"]["revision"] == revision
+        and not result.get("tags")
     ]
     if len(matches) != 1:
         raise ValueError(
@@ -74,7 +76,7 @@ def select_changed_results(
     validator = Draft202012Validator(schema)
     selected: list[Result] = []
     seen: set[Path] = set()
-    identities: set[tuple[str, str, str, str, str]] = set()
+    identities: set[ResultIdentity] = set()
 
     for status, filename in _changed_entries(changed_files, pr_root):
         if status == "removed":
@@ -164,9 +166,9 @@ def _view_rows(
         return []
 
     lines = [
-        "| Model | View | Acc | Acc Δ Jev | Acc Δ Luna | ECE | ECE Δ Jev | "
+        "| Model | Tags | View | Acc | Acc Δ Jev | Acc Δ Luna | ECE | ECE Δ Jev | "
         "ECE Δ Luna | NLL | NLL Δ Jev | NLL Δ Luna | Rows |",
-        "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+        "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
     ]
     for submission in sorted(
         submissions, key=lambda item: (item["model"]["name"], item["model"]["revision"])
@@ -181,6 +183,7 @@ def _view_rows(
                 + " | ".join(
                     [
                         _escape(submission["model"]["name"]),
+                        _escape(", ".join(submission.get("tags", []))),
                         _escape(view_name.removeprefix(prefix)),
                         _percent(view.get("accuracy")),
                         *[
@@ -239,9 +242,9 @@ def render_report(
             "",
             "### Overall",
             "",
-            "| Model | Revision | Primary acc | Δ Jev | Δ Luna | Supported acc | Coverage | "
+            "| Model | Revision | Tags | Primary acc | Δ Jev | Δ Luna | Supported acc | Coverage | "
             "ECE | NLL | Errors | Unsupported |",
-            "|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|",
+            "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|",
         ]
     )
     reference_primary = [reference["primary_accuracy"] for _, reference in references]
@@ -254,6 +257,7 @@ def render_report(
                 [
                     _escape(submission["model"]["name"]),
                     _escape(submission["model"]["revision"]),
+                    _escape(", ".join(submission.get("tags", []))),
                     _percent(submission["primary_accuracy"]),
                     *[
                         _delta(

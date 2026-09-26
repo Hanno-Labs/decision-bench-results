@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+import pytest
+
 from scripts.build_leaderboard import build
 from scripts.common import (
     leaderboard_rows,
@@ -46,6 +48,28 @@ def test_result_without_artifact_is_valid_and_buildable(tmp_path: Path) -> None:
     assert all(row["model_type"] == model.get("model_type") for row in rows)
     assert all(row["artifact_uri"] is None for row in rows)
     assert all(row["artifact_manifest_sha256"] is None for row in rows)
+
+
+def test_compact_result_coexists_with_untagged_result(tmp_path: Path) -> None:
+    source = load_object(result_paths(Path.cwd())[0])
+    model = source["model"]
+    result_dir = tmp_path / "results" / safe_model_name(model["name"]) / model["revision"]
+    result_dir.mkdir(parents=True)
+    (result_dir / "model_meta.json").write_text(json.dumps(model))
+    (result_dir / "DecisionBench.json").write_text(json.dumps(source))
+    compact = {**source, "tags": ["compact"]}
+    (result_dir / "DecisionBench--compact.json").write_text(json.dumps(compact))
+    schema_dir = tmp_path / "schemas"
+    schema_dir.mkdir()
+    (schema_dir / "result.schema.json").write_text(
+        (Path.cwd() / "schemas" / "result.schema.json").read_text()
+    )
+
+    assert len(validate_repository(tmp_path)) == 2
+    assert {row["tags"] for row in leaderboard_rows(tmp_path)} == {"", "compact"}
+    (result_dir / "duplicate.json").write_text(json.dumps(compact))
+    with pytest.raises(ValueError, match="duplicate result identity"):
+        validate_repository(tmp_path)
 
 
 def test_non_reasoning_suite_metrics_recompute_ece_from_rows(tmp_path: Path) -> None:

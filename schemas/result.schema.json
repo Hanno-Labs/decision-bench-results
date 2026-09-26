@@ -17,6 +17,7 @@
     "dataset_repo": {"type": "string", "minLength": 1},
     "dataset_revision": {"type": "string", "minLength": 1},
     "task_spec_sha256": {"$ref": "#/$defs/sha256"},
+    "tags": {"type": "array", "uniqueItems": true, "items": {"enum": ["compact"]}},
     "model": {"$ref": "#/$defs/model"},
     "requested_rows": {"type": "integer", "minimum": 1},
     "successful_rows": {"type": "integer", "minimum": 0},
