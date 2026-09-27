@@ -57,7 +57,15 @@ def test_compact_result_coexists_with_untagged_result(tmp_path: Path) -> None:
     result_dir.mkdir(parents=True)
     (result_dir / "model_meta.json").write_text(json.dumps(model))
     (result_dir / "DecisionBench.json").write_text(json.dumps(source))
-    compact = {**source, "tags": ["compact"]}
+    compact = {
+        **source,
+        "tags": ["compact"],
+        "model": {
+            **model,
+            "adapter": "compact-native",
+            "probability_source": "option-marker-softmax",
+        },
+    }
     (result_dir / "DecisionBench--compact.json").write_text(json.dumps(compact))
     schema_dir = tmp_path / "schemas"
     schema_dir.mkdir()
@@ -67,6 +75,10 @@ def test_compact_result_coexists_with_untagged_result(tmp_path: Path) -> None:
 
     assert len(validate_repository(tmp_path)) == 2
     assert {row["tags"] for row in leaderboard_rows(tmp_path)} == {"", "compact"}
+    assert {row["adapter"] for row in leaderboard_rows(tmp_path)} == {
+        model["adapter"],
+        "compact-native",
+    }
     (result_dir / "duplicate.json").write_text(json.dumps(compact))
     with pytest.raises(ValueError, match="duplicate result identity"):
         validate_repository(tmp_path)

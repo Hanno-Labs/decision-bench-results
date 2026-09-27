@@ -39,7 +39,19 @@ def validate_result_file(
     meta_path = expected_dir / "model_meta.json"
     if not meta_path.is_file():
         raise FileNotFoundError(meta_path)
-    if load_object(meta_path) != model:
+    canonical_model = load_object(meta_path)
+    if result.get("tags"):
+        identity_fields = (
+            "name",
+            "revision",
+            "model_type",
+            "url",
+            "open_weights",
+            "parameter_count",
+        )
+        if any(canonical_model.get(field) != model.get(field) for field in identity_fields):
+            raise ValueError(f"model identity mismatch: {meta_path}")
+    elif canonical_model != model:
         raise ValueError(f"model metadata mismatch: {meta_path}")
 
     classified = result["successful_rows"] + result["unsupported_rows"] + result["error_rows"]
