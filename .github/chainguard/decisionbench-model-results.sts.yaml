@@ -1,0 +1,10 @@
+# Only the DecisionBench finalizer on main may write a results PR.
+issuer: https://token.actions.githubusercontent.com
+subject: repo:Hanno-Labs/decision-bench:ref:refs/heads/main
+claim_pattern:
+  event_name: (schedule|workflow_dispatch)
+  workflow_ref: Hanno-Labs/decision-bench/.github/workflows/model-results.yml@refs/heads/main
+
+permissions:
+  contents: write
+  pull_requests: write
