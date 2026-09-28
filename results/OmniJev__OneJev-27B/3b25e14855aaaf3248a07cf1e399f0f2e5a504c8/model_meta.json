@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "OmniJev/OneJev-27B",
+  "open_weights": true,
+  "parameter_count": 27356728560,
+  "probability_source": "complete_candidate_distribution",
+  "revision": "3b25e14855aaaf3248a07cf1e399f0f2e5a504c8",
+  "url": "https://huggingface.co/OmniJev/OneJev-27B"
+}
