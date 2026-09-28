@@ -1,0 +1,10 @@
+{
+  "adapter": "jev-compatible-server-v1",
+  "model_type": "decision-model",
+  "name": "OmniJev/OneJev-4B",
+  "open_weights": true,
+  "parameter_count": 5174964736,
+  "probability_source": "complete_candidate_distribution",
+  "revision": "73bc1e3279c9f0628d1db931bf5468a1fe0cbdd3",
+  "url": "https://huggingface.co/OmniJev/OneJev-4B"
+}
