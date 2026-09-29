@@ -1,0 +1,10 @@
+{
+  "adapter": "bongard-serving-systemone-v1",
+  "model_type": "decision-model",
+  "name": "AgentBull/bongard-mini",
+  "open_weights": true,
+  "parameter_count": 7510242160,
+  "probability_source": "judgment_head_softmax_temperature_calibrated_v1",
+  "revision": "c81c5b883a5983669be84be98658eac940489613",
+  "url": "https://huggingface.co/AgentBull/bongard-mini"
+}
