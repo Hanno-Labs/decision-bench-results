@@ -1,0 +1,10 @@
+{
+  "adapter": "empiriolabs-hosted-systemone-v1",
+  "model_type": "decision-model",
+  "name": "empiriolabsai/aplomb-1",
+  "open_weights": true,
+  "parameter_count": 5295891968,
+  "probability_source": "native_candidate_distribution",
+  "revision": "hosted-api-snapshot-2026-10-09",
+  "url": "https://huggingface.co/empiriolabsai/aplomb-1"
+}
