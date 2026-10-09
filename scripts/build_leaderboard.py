@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import shutil
 from pathlib import Path
 
 import pandas as pd
@@ -21,12 +22,8 @@ def build(root: Path, output_dir: Path) -> tuple[Path, Path]:
     json_path = output_dir / "leaderboard.json"
     frame.to_parquet(parquet_path, index=False)
     json_path.write_text(json.dumps(rows, indent=2, sort_keys=True) + "\n")
-    (output_dir / "README.md").write_text(
-        "---\nlicense: cc0-1.0\npretty_name: DecisionBench Results\n---\n\n"
-        "# DecisionBench Results\n\nGenerated from reviewed records in "
-        "[Hanno-Labs/decision-bench-results]"
-        "(https://github.com/Hanno-Labs/decision-bench-results).\n"
-    )
+    shutil.copyfile(root / "eval.yaml", output_dir / "eval.yaml")
+    shutil.copyfile(root / "dataset_card.md", output_dir / "README.md")
     return parquet_path, json_path
 
 
