@@ -22,8 +22,6 @@ jobs:
           python-version: "3.12"
       - run: uv sync --locked
       - name: Publish generated dataset
-        env:
-          HF_OIDC_RESOURCE: datasets/Hanno-Labs/decision-bench-results
         run: |
           uv run build-leaderboard --output-dir dist
           uv run hf download \
@@ -36,7 +34,7 @@ jobs:
             "${RUNNER_TEMP}/decisionbench-input/data/eval-00000-of-00001.parquet" \
             dist/data/decisionbench.parquet \
             --manifest dist/input_manifest.json
-          uv run hf upload \
+          HF_OIDC_RESOURCE=datasets/Hanno-Labs/decision-bench-results uv run hf upload \
             Hanno-Labs/decision-bench-results \
             dist \
             . \
