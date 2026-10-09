@@ -26,6 +26,16 @@ jobs:
           HF_OIDC_RESOURCE: datasets/Hanno-Labs/decision-bench-results
         run: |
           uv run build-leaderboard --output-dir dist
+          uv run hf download \
+            Hanno-Labs/decision-bench \
+            data/eval-00000-of-00001.parquet \
+            --repo-type dataset \
+            --revision 071b7b2d2e1504c89e1e5a811a3f82e1bfe3aedb \
+            --local-dir "${RUNNER_TEMP}/decisionbench-input"
+          uv run python scripts/prepare_inspect_dataset.py \
+            "${RUNNER_TEMP}/decisionbench-input/data/eval-00000-of-00001.parquet" \
+            dist/data/decisionbench.parquet \
+            --manifest dist/input_manifest.json
           uv run hf upload \
             Hanno-Labs/decision-bench-results \
             dist \

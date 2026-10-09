@@ -22,6 +22,9 @@ def test_leaderboard_build(tmp_path: Path) -> None:
     parquet_path, json_path = build(Path.cwd(), tmp_path)
     assert parquet_path.is_file()
     assert json_path.is_file()
+    assert json.loads(json_path.read_text()) == leaderboard_rows(Path.cwd())
+    assert (tmp_path / "eval.yaml").read_bytes() == (Path.cwd() / "eval.yaml").read_bytes()
+    assert (tmp_path / "README.md").read_bytes() == (Path.cwd() / "dataset_card.md").read_bytes()
 
 
 def test_result_without_artifact_is_valid_and_buildable(tmp_path: Path) -> None:

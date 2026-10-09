@@ -1,0 +1,18 @@
+name: DecisionBench
+description: >-
+  Primary accuracy on the frozen 23,900-row DecisionBench v1.0 suite.
+  Native decision probabilities select a candidate; unsupported rows count as
+  incorrect. Candidate IDs use a reversible UTF-8 hex encoding for exact match.
+  The native evaluator also reports soft-label NLL and 15-bin top-label ECE.
+evaluation_framework: inspect-ai
+tasks:
+  - id: DecisionBench
+    config: default
+    split: train
+    field_spec:
+      input: input
+      target: target
+    solvers:
+      - name: generate
+    scorers:
+      - name: exact
