@@ -1,0 +1,10 @@
+{
+  "adapter": "drex-max-systemone-api-v1",
+  "model_type": "decision-model",
+  "name": "nace-ai/drex-max",
+  "open_weights": null,
+  "parameter_count": null,
+  "probability_source": "native_drex_max_probability_distribution",
+  "revision": "hosted-api-snapshot-2026-10-20",
+  "url": "https://console.nace.ai/docs/drex/guides/drex-max"
+}
