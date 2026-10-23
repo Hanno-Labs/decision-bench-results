@@ -1,0 +1,10 @@
+{
+  "adapter": "arbit-hf-remote-code-v1",
+  "model_type": "decision-model",
+  "name": "litillabs/arbit-1.7b",
+  "open_weights": true,
+  "parameter_count": 2062212612,
+  "probability_source": "native_joint_head_softmax",
+  "revision": "d8ca47d20f5f406317994c4df096b7bedfefb5de",
+  "url": "https://huggingface.co/litillabs/arbit-1.7b"
+}
