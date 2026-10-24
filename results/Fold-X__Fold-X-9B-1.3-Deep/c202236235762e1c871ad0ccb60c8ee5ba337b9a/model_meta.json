@@ -1,0 +1,10 @@
+{
+  "adapter": "foldx-systemone-hybrid26-256-calibrated-v1",
+  "model_type": "decision-model",
+  "name": "Fold-X/Fold-X-9B-1.3-Deep",
+  "open_weights": false,
+  "parameter_count": 9000000000,
+  "probability_source": "systemone_selection_9b_hybrid26_256_4bsmall_t80_max3_v2",
+  "revision": "c202236235762e1c871ad0ccb60c8ee5ba337b9a",
+  "url": null
+}
