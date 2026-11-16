@@ -1,0 +1,10 @@
+{
+  "adapter": "quyet-public-api-v1",
+  "model_type": "decision-model",
+  "name": "chinhnc/Quyet-1.2-Large",
+  "open_weights": true,
+  "parameter_count": 31273094253,
+  "probability_source": "quyet_raw_probabilities_default_temperature",
+  "revision": "ffad03b6f20aa548ba2e045410e9fcafe4ddf0d2",
+  "url": "https://huggingface.co/chinhnc/Quyet-1.2-Large"
+}
